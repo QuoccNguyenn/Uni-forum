@@ -10,10 +10,10 @@ const Nav = () => {
                 <ContainerNav>
                     <Logo><img src="images/logo.png" alt="" /></Logo>
                     <ContentNav>
-                        <Box_btn>
+                        <BoxBtn>
                             <Btn href="#">Đăng ký</Btn>
                             <Btn href="#">Đăng Nhập</Btn>
-                        </Box_btn>
+                        </BoxBtn>
 
                         <BoxIcon>
                             <Icons><i class="fas fa-search"></i></Icons>
@@ -55,7 +55,7 @@ const ContentNav = styled.div`
 
 `
 
-const Box_btn = styled.div`
+const BoxBtn = styled.div`
     height:60px;
     display :flex;
     align-items:center;

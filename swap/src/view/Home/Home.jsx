@@ -5,13 +5,13 @@ import ListControl from '../../components/ListControl/ListControl';
 
 function Home() {
     return(
-        <Router>
-          <ListControl/>
-          <div className="App">
-            <Route path='/categories' component={Categories}/>
-          </div>
-        </Router>
-      );
+      <Router>
+        <ListControl/>
+        <div className="App">
+          <Route path='/categories' component={Categories}/>
+        </div>
+      </Router>
+    );
 }
 
 export default Home;
