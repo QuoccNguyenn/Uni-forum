@@ -13,6 +13,8 @@ function App() {
 const WrapperHome = styled.div`
   overflow: hidden;
   max-height: 100vh;
+  max-width: 1140px;
+  margin: auto;
 `
 
 export default App;
