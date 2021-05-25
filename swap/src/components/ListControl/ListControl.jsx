@@ -69,7 +69,10 @@ function ListControl() {
     return(
         <ListControlSection>
             <Selection>
-                <div className='dropdown' onClick={handleClick}>Tất cả chuyên mục <a><i className={click ? "fas fa-caret-down" : "fas fa-caret-right"}></i></a></div>
+                <div className='dropdown-holder' onClick={handleClick}>
+                    <div className='dropdown'>Tất cả chuyên mục</div>
+                    <div className='dropdown-icon'><i className={click ? "fas fa-caret-down" : "fas fa-caret-right"}></i></div>
+                </div>    
                 <SelectionItem className={click ? "active" : ""}>
                     {category.map(item => (
                         <Item style={item.decor}>
@@ -127,10 +130,24 @@ const ListControlSection = styled.section`
 const Selection = styled.div`
     margin: 2px;
 
+    .dropdown-holder{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        border: 1px solid;
+        padding: 0 5px;
+
+        cursor: pointer;
+    }
+
     .dropdown{
         padding:6px 12px;
-        cursor: pointer;
-        border: 1px solid;
+    }
+
+    .dropdown-icon{
+        width: 10px;
+        text-align: center;
     }
 
     div{

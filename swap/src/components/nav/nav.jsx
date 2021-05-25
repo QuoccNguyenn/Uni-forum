@@ -54,10 +54,10 @@ const Nav = () => {
 
                                     <div className="category-links">
                                         <div className="title">
-                                            <a href="#">Danh Mục</a>
+                                            <a href="/#">Danh Mục</a>
                                             <ChildUl>
                                                 <li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
@@ -65,42 +65,42 @@ const Nav = () => {
                                                     <b className='topics-count'>131</b>
                                                 </li>
                                                 <li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
 
                                                     <b className='topics-count'>131</b>
                                                 </li><li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
 
                                                     <b className='topics-count'>131</b>
                                                 </li><li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
 
                                                     <b className='topics-count'>131</b>
                                                 </li><li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
 
                                                     <b className='topics-count'>131</b>
                                                 </li><li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
 
                                                     <b className='topics-count'>131</b>
                                                 </li><li className="cata_link">
-                                                    <a href="#" className="nameLink">
+                                                    <a href="/#" className="nameLink">
                                                         <span className="dot" style={{ background: '#652D90' }}></span>
                                                         <span className="text">Uncategorized</span>
                                                     </a>
@@ -129,11 +129,11 @@ const Nav = () => {
 
 }
 
-const Handelclick=()=>{
-     const[click,setclick]= useState(true);
-     console.log(click);
-     return (click);
-}
+// const Handelclick=()=>{
+//      const[click,setclick]= useState(true);
+//      console.log(click);
+//      return (click);
+// }
 
 const BoxNav = styled.nav`
     with:100%;  
