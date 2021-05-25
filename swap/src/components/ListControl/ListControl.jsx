@@ -10,7 +10,7 @@ function ListControl() {
             </ul>
             <ul>
                 <li><Link to='/Categories'>Danh mục</Link></li>
-                <li><Link to='/Categories'>Mới nhất</Link></li>
+                <li><Link to='/latest'>Mới nhất</Link></li>
                 <li><Link to='/Categories'>Top</Link></li>
             </ul>
         </ListControlSection>
