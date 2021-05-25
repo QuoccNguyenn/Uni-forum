@@ -25,7 +25,7 @@ function Categories() {
             content: 'For the discussion and informal consensus-gathering work related to potential governance proposals.',
             num: '122',
             decor: {
-                borderLeft: '5px solid blue' 
+                borderLeft: '5px solid #0088CC' 
             }
         },
         {
@@ -41,7 +41,7 @@ function Categories() {
             content: 'This section is for discussions around governance systems, ways of distributing resources, how the community should think about governance responsibilities–basically all things related to governance, but which are not a specific proposal.',
             num: '12',
             decor: {
-                borderLeft: '5px solid violet' 
+                borderLeft: '5px solid #652D90' 
             }
         },
         {
@@ -59,6 +59,81 @@ function Categories() {
             decor: {
                 borderLeft: '5px solid red' 
             }
+        }
+    ]
+
+    const topic = [
+        {
+            title: 'Community Governance Process',
+            img: '../../images/avt-1.png',
+            colorCls: 'violet',
+            topic: 'Governance-Meta',
+            tpDisplay: '',
+            num: '15',
+            time:'10 Thg 04'
+        },
+        {
+            title: 'Uniswap Governance Forum Rules',
+            img: '../../images/225_2.jpeg',
+            colorCls: 'd-none',
+            topic: '',
+            tpDisplay: 'd-none',
+            num: '2',
+            time:'Thg 09\'20'
+        },
+        {
+            title: 'Compounding Fees in V3 LP',
+            img: '../../images/90.png',
+            colorCls: 'blue',
+            topic: 'Proposal Discussion',
+            tpDisplay: '',
+            num: '2',
+            time:'8 giờ'
+        },
+        {
+            title: 'Building Uniswap’s Moat: Attracting Non-DeFi Developers',
+            img: '../../images/3143_2.jpeg',
+            colorCls: 'blue',
+            topic: 'Proposal Discussion',
+            tpDisplay: '',
+            num: '1',
+            time:'1 ngày'
+        },
+        {
+            title: 'Community Governance Process',
+            img: '../../images/avt-1.png',
+            colorCls: 'violet',
+            topic: 'Governance-Meta',
+            tpDisplay: '',
+            num: '15',
+            time:'10 Thg 04'
+        },
+        {
+            title: 'Uniswap Governance Forum Rules',
+            img: '../../images/225_2.jpeg',
+            colorCls: 'd-none',
+            topic: '',
+            tpDisplay: 'd-none',
+            num: '2',
+            time:'Thg 09\'20'
+        },
+        {
+            title: 'Compounding Fees in V3 LP',
+            img: '../../images/90.png',
+            colorCls: 'blue',
+            topic: 'Proposal Discussion',
+            tpDisplay: '',
+            num: '2',
+            time:'8 giờ'
+        },
+        {
+            title: 'Building Uniswap’s Moat: Attracting Non-DeFi Developers',
+            img: '../../images/3143_2.jpeg',
+            colorCls: 'blue',
+            topic: 'Proposal Discussion',
+            tpDisplay: '',
+            num: '1',
+            time:'1 ngày'
         }
     ]
 
@@ -81,7 +156,6 @@ function Categories() {
                                     <span>{item.num}</span>
                                 </Item>
                             ))}
-                            
                         </CategoryContent>
                     </div>
                 </CategoryHolder>
@@ -90,6 +164,23 @@ function Categories() {
                         <Title>
                             <div>Mới nhất</div>
                         </Title>
+                        <TopicContent>
+                            {topic.map(item => (
+                                <ItemTopic>
+                                    <Image>
+                                        <img src={item.img} alt=''/>
+                                    </Image>
+                                    <div className='content'>
+                                        <h5>{item.title}</h5>
+                                        <Block className={item.colorCls}/><div className={`name ${item.tpDisplay}`}>{item.topic}</div>
+                                    </div>
+                                    <div className='date-time'>
+                                        <div>{item.num}</div>
+                                        <span className='date'>{item.time}</span>
+                                    </div>
+                                </ItemTopic>
+                            ))}
+                        </TopicContent>
                     </div>
                 </TopicHolder>
             </CategoryContainer>
@@ -107,12 +198,14 @@ const CategoryContainer = styled.div`
 
 const CategoryHolder = styled.div`
     width: 50%;
+    padding: 0 10px;
 `
 
 const Title = styled.div`
-    width: 100%;
     display: flex;
     flex-direction: row;
+    color: #919191;
+    width: 100%;
     border-bottom: 2px solid lightgray;
     padding: 10px 0;
 
@@ -149,8 +242,76 @@ const Item = styled.div`
 
 const TopicHolder = styled.div`
     width: 50%;
-
     padding: 0 10px;
+`
+
+const TopicContent = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const ItemTopic = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10px;
+    border-bottom: 1px solid lightgrey;
+
+    h5{
+        margin: 0;
+        font-size: 18px;
+    }
+    .name{
+        display: inline-block;
+        font-size: 13px;
+        padding-left: 5px;
+    }
+    .content{
+        width: 55%;
+    }
+    .date-time{
+        text-align: right;
+        width: 30%;
+
+        div{
+            font-weight: bold;
+        }
+        span{
+            color: #919191;
+        }
+    }
+
+    .violet{
+        background-color: #652D90;
+    }
+
+    .blue{
+        background-color: #0088CC;
+    }
+
+    .d-none{
+        display: none!important;
+    }
+`
+
+const Block = styled.span`
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+
+`
+
+const Image = styled.div`
+    border-radius: 5rem;
+    overflow: hidden;
+    height: 100%;
+    width: 45px;
+
+    img{
+        height: 45px;
+        width: 45px;
+    }
 `
 
 export default Categories;
