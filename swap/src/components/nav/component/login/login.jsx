@@ -86,6 +86,8 @@ const FooterForm = styled.div`
         padding:.5rem 2.5rem;
         border: transparent;
         color:white;
+        border-radius: 3px;
+        
         &:focus {
             box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
             outline: 1px solid #000;
