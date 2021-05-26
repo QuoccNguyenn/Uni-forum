@@ -3,20 +3,27 @@ import styled from 'styled-components';
 import {  Modal} from 'reactstrap';
 import Login from './component/login/login';
 import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
+import Singin from './component/login/singin';
 
-const Nav = () => {
+const Nav = (props) => {
+
+    const {
+        buttonLabel,
+        className
+      } = props;
 
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
 
-    const ref = useRef();
+    const refSearch = useRef();
+    const refbar = useRef();
     const [dotsearch, SetDotsearch] = useState(false)
 
     const [dotbar, SetDotbar] = useState(false);
 
-    useOnClickOutside(ref, () => SetDotbar(false));
-    useOnClickOutside(ref, () => SetDotsearch(false));
+    useOnClickOutside(refbar, () => SetDotbar(false));
+    useOnClickOutside(refSearch, () => SetDotsearch(false));
 
     return (
         <BoxNav> 
@@ -26,16 +33,19 @@ const Nav = () => {
                     <ContentNav>
                         <BoxBtn>
                             <Btn href="#" onClick={toggle}>Đăng ký</Btn>
-                            <Modal isOpen={modal} toggle={toggle} >
+                            <Modal isOpen={modal} toggle={toggle} className={className}>
                                 <Login></Login>
                             </Modal>
 
-                            <Btn href="#">Đăng Nhập</Btn>
+                            <Btn href="#" onClick={toggle}>Đăng Nhập</Btn>
+                            <Modal isOpen={modal} toggle={toggle} className={className}>
+                                <Singin></Singin>
+                            </Modal>
                         </BoxBtn>
 
                         <BoxIcon>
                             <Icons className="bar" onClick={() => { SetDotsearch(true)}}><i class="fas fa-search"></i>
-                                <BarChild ref={ref} onClick={() => { SetDotsearch(true)}} className={dotsearch ? "active" : ""}>
+                                <BarChild ref={refSearch} onClick={() => { SetDotsearch(true)}} className={dotsearch ? "active" : ""}>
                                     <GroupInput>
                                         <input type="text" placeholder="tìm kiếm chủ đề, bài viết, tài khoản hoặc các danh mục" />
                                     </GroupInput>
@@ -43,7 +53,7 @@ const Nav = () => {
                             </Icons>
 
                             <Icons className="bar" onClick={() => { SetDotbar(true) }}><i class="fas fa-bars"></i>
-                                <BarChild  ref={ref} onClick={() => { SetDotbar(true) }} className={dotbar ? "active" : ""}>
+                                <BarChild ref = {refbar}  onClick={() => { SetDotbar(true) }} className={dotbar ? "active" : ""}>
                                     <ChildUl className="box_link">
                                         <li className="link">Mới Nhất</li>
                                         <li className="link">Top</li>

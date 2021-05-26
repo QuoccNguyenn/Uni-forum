@@ -16,5 +16,8 @@ code {
 /* modal */
 
 .modal-dialog {
-  max-width:45vw;
+  max-width:690px;
+  height: 100vh;
+    display: flex;
+    align-items: center;
 }

@@ -4,11 +4,11 @@ import GroupInput from './compoment/GroupInput/groupinput';
 import TitleForm from './compoment/TitleForm/TitleForm';
 
 
-const Login=() =>{ 
+const Singin=() =>{ 
     return(
-        <BoxLogin>
-            <FormLogin>
-                <TitleForm title={`WellCome`} img={`https://emoji.discourse-cdn.com/apple/wave/2.png`} slog={`Let's create your account`}></TitleForm>
+        <BoxSingin>
+            <FormSingin>
+                <TitleForm title={`WellCome dăng nhập`} img={`https://emoji.discourse-cdn.com/apple/wave/2.png`} slog={`Let's create your account`}></TitleForm>
 
                 <ContentForm>
                     <form action="#">
@@ -23,24 +23,24 @@ const Login=() =>{
                     <button>Create your account</button>
                     <a href="/">Đăng Nhập</a>
                 </FooterForm>
-            </FormLogin>
+            </FormSingin>
 
-            <LoginGit>
+            <SinginGit>
                 <button>
                     <i class="fab fa-github"></i> Với GitHub
                 </button>
-            </LoginGit>
-        </BoxLogin>
+            </SinginGit>
+        </BoxSingin>
     );
 }
 
-const BoxLogin = styled.div`
+const BoxSingin = styled.div`
     width:690px;
     height:500px;
     display:flex;
 `
 
-const FormLogin = styled.div`
+const FormSingin = styled.div`
     width:65%;
     height100%;
     display:flex;
@@ -100,7 +100,7 @@ const FooterForm = styled.div`
     }
 `
 
-const LoginGit = styled.div`
+const SinginGit = styled.div`
     width:35%;
     height:100%;
     display: flex;
@@ -121,4 +121,4 @@ const LoginGit = styled.div`
     }
 `
 
-export default Login
+export default Singin

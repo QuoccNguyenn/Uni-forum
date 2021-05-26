@@ -89,7 +89,7 @@ function ListControl() {
             <ul>
                 <li><Link to='/Categories'>Danh mục</Link></li>
                 <li><Link to='/latest'>Mới nhất</Link></li>
-                <li><Link to='/Categories'>Top</Link></li>
+                <li><Link to='/top'>Top</Link></li>
             </ul>
         </ListControlSection>
     );
