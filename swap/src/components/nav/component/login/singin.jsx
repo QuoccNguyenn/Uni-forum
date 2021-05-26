@@ -4,25 +4,23 @@ import GroupInput from './compoment/GroupInput/groupinput';
 import TitleForm from './compoment/TitleForm/TitleForm';
 
 
-const Singin=() =>{ 
+const Singin=() =>{
     return(
         <BoxSingin>
             <FormSingin>
-                <TitleForm title={`WellCome dăng nhập`} img={`https://emoji.discourse-cdn.com/apple/wave/2.png`} slog={`Let's create your account`}></TitleForm>
+                <TitleForm title={`Welcome back`} img={`https://emoji.discourse-cdn.com/apple/wave/6.png`} slog={`Log in to your account`}></TitleForm>
 
                 <ContentForm>
                     <form action="#">
-                        <GroupInput type={`email`} name={`Email`} title={`Không hiển thị công cộng`}></GroupInput>
-                        <GroupInput type={`text`} name={`Username`} title={`Duy Nhất, không có khoảng trống, ngắn`}></GroupInput>
-                        <GroupInput type={`text`} name={`Tên`} title={`Tên đầy đủ của bạn (tùy chọn)`}></GroupInput>
-                        <GroupInput type={`password`} name={`Mật Khẩu`} title={`ít nhất 10 ký tự`}></GroupInput>
+                        <GroupInput type={`email`} name={`Email`} ></GroupInput>
+                        <GroupInput type={`password`} name={`Mật Khẩu`}></GroupInput>
                    </form>
                 </ContentForm>
 
                 <FooterForm>
                     <button>Create your account</button>
-                    <a href="/">Đăng Nhập</a>
-                </FooterForm>
+                    <a>Đăng Nhập</a>
+                </FooterForm> 
             </FormSingin>
 
             <SinginGit>
@@ -38,6 +36,8 @@ const BoxSingin = styled.div`
     width:690px;
     height:500px;
     display:flex;
+    background:white;
+    position: relative;
 `
 
 const FormSingin = styled.div`
@@ -52,9 +52,8 @@ const FormSingin = styled.div`
 
 const ContentForm = styled.div`
     width:100%;
-    height:60%;
-    overflow: hidden;
-    overflow-y: scroll;
+    height:50%;
+    
     padding-right:1rem;
 
     /* width */

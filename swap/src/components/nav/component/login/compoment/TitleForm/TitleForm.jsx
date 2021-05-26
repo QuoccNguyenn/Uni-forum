@@ -23,12 +23,12 @@ const BoxTitle = styled.div`
     flex-wrap: wrap;
 
     h1{
-            width: 40%;
             margin: 0;
             font-size: 30px;
     }
 
     .img{
+        padding-left:20px;
         width: 50%;
         
         img{

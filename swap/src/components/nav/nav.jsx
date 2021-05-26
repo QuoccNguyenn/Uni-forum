@@ -12,17 +12,26 @@ const Nav = (props) => {
       } = props;
 
     const [modal, setModal] = useState(false);
+    const [modalDN, setModalDN] = useState(true);
 
     const toggle = () => setModal(!modal);
+    const toggleDN = () => setModalDN(!modalDN);
 
     const refSearch = useRef();
     const refbar = useRef();
-    const [dotsearch, SetDotsearch] = useState(false)
+    const refModal = useRef();
 
+    const [dotsearch, SetDotsearch] = useState(false)
     const [dotbar, SetDotbar] = useState(false);
+    const [clickModal, SetClickModal] = useState(false);
 
     useOnClickOutside(refbar, () => SetDotbar(false));
     useOnClickOutside(refSearch, () => SetDotsearch(false));
+    useOnClickOutside(refModal, () => SetClickModal(false));
+
+    function Handelclick(){
+        SetClickModal(!clickModal);
+    }
 
     return (
         <BoxNav> 
@@ -33,13 +42,16 @@ const Nav = (props) => {
                         <BoxBtn>
                             <Btn href="#" onClick={toggle}>Đăng ký</Btn>
                             <Modal isOpen={modal} toggle={toggle} className={className}>
+                               
                                 <Login></Login>
                             </Modal>
 
-                            <Btn href="#" onClick={toggle}>Đăng Nhập</Btn>
-                            <Modal isOpen={modal} toggle={toggle} className={className}>
-                                <Singin></Singin>
-                            </Modal>
+                            <Btn href="#" onClick={toggleDN}>Đăng Nhập</Btn>
+
+                            <Modal isOpen={modalDN} toggle={toggleDN} className={className}>
+                               
+                               <Singin></Singin>
+                           </Modal>
                         </BoxBtn>
 
                         <BoxIcon>
@@ -177,7 +189,6 @@ const BoxBtn = styled.div`
     display :flex;
     align-items:center;
 
-    
 `
 
 const Btn = styled.a`

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { category } from '../Categories/constants/data';
+import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 
 function ListControl() {
 
@@ -16,10 +17,13 @@ function ListControl() {
         setActive(value);
     }
 
+    const ref = useRef();
+
+    useOnClickOutside(ref, () =>setClick(false));
     return(
         <ListControlSection>
             <Selection>
-                <div className='dropdown-holder' onClick={handleClick}>
+                <div className='dropdown-holder' ref={ref} onClick={()=>{setClick(true)}}>
                     <div className='dropdown'>Tất cả chuyên mục</div>
                     <div className='dropdown-icon'><i className={click ? "fas fa-caret-down" : "fas fa-caret-right"}></i></div>
                 </div>
