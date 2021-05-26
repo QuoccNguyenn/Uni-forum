@@ -6,7 +6,7 @@ const Card =(props) => {
 
     return(
 
-        <BoxCard className={ClickCard && idx==test && idxs==test2 ?"active":""}>
+        <BoxCard className={ClickCard && idx===test && idxs===test2 ?"active":""}>
             <FirstCard>
                 <a href="/#" className="imgCard">
                     <img src={`${img}`} style={{ width: '120px'}} alt="" />
@@ -30,22 +30,22 @@ const Card =(props) => {
             </Metadata>
 
             <Btnbadge>
-                <a href=""> 
+                <a href="/#"> 
                     <i class="fas fa-user-alt" style={{ color: '#e7c300' }}></i>
                     <span>Lãnh Đạo</span>
                 </a>
 
-                <a href="">
+                <a href="/#">
                     <i class="fas fa-certificate" style={{ color: '#e7c300' }}></i> 
                     <span>Chủ Đề Tuyệt Vời</span>
                 </a>
 
-                <a href="">
+                <a href="/#">
                     <i class="fas fa-user-plus" style={{ color: 'silver' }}></i> 
                     <span>Người Vận Động</span>
                 </a>
 
-                <a href=""> 
+                <a href="/#"> 
                     <span>+11 Khác</span>
                 </a>
             </Btnbadge>
@@ -67,6 +67,7 @@ const BoxCard = styled.div`
     text-decoration: none;
     color:black;
     display:none;
+    transform: translateX(-40%);
 
     &.active{
     display:block;

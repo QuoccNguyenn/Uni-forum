@@ -8,13 +8,10 @@ import Card from '../userCard/card';
 const Table=(props) => {
     const{Data}=props;
 
-    const [data, SetData] = useState(Data);
-    console.log(data);
+    const data = Data;
     const [ClickCard, SetClickCard] = useState(false);
     const [test, Settest] = useState(0);
     const [pIdxs, SetpIdxs] = useState(0);
-    console.log(test);
-    console.log(pIdxs);
 
     const ref = useRef();
 

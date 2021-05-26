@@ -8,7 +8,6 @@ import Singin from './component/login/singin';
 const Nav = (props) => {
 
     const {
-        buttonLabel,
         className
       } = props;
 

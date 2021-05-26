@@ -1,8 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 import Table from '../table/table';
-import Card from '../userCard/card';
 import { DataLatest } from './constants';
 
 const Latest = () => {
