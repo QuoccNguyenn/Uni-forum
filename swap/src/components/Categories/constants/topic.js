@@ -1,7 +1,12 @@
 export const topic = [
     {
         title: 'Community Governance Process',
-        img: '../../images/avt-1.png',
+        persons:{
+            img: '../../images/avt-1.png',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'violet',
         topic: 'Governance-Meta',
         tpDisplay: '',
@@ -10,7 +15,12 @@ export const topic = [
     },
     {
         title: 'Uniswap Governance Forum Rules',
-        img: '../../images/225_2.jpeg',
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'd-none',
         topic: '',
         tpDisplay: 'd-none',
@@ -19,7 +29,12 @@ export const topic = [
     },
     {
         title: 'Compounding Fees in V3 LP',
-        img: '../../images/90.png',
+        persons:{
+            img: '../../images/90.png',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'blue',
         topic: 'Proposal Discussion',
         tpDisplay: '',
@@ -28,7 +43,12 @@ export const topic = [
     },
     {
         title: 'Building Uniswap’s Moat: Attracting Non-DeFi Developers',
-        img: '../../images/3143_2.jpeg',
+        persons:{
+            img: '../../images/3143_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'blue',
         topic: 'Proposal Discussion',
         tpDisplay: '',
@@ -37,7 +57,12 @@ export const topic = [
     },
     {
         title: 'Community Governance Process',
-        img: '../../images/avt-1.png',
+        persons:{
+            img: '../../images/avt-1.png',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'violet',
         topic: 'Governance-Meta',
         tpDisplay: '',
@@ -46,7 +71,12 @@ export const topic = [
     },
     {
         title: 'Uniswap Governance Forum Rules',
-        img: '../../images/225_2.jpeg',
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'd-none',
         topic: '',
         tpDisplay: 'd-none',
@@ -55,7 +85,12 @@ export const topic = [
     },
     {
         title: 'Compounding Fees in V3 LP',
-        img: '../../images/90.png',
+        persons:{
+            img: '../../images/90.png',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'blue',
         topic: 'Proposal Discussion',
         tpDisplay: '',
@@ -64,7 +99,12 @@ export const topic = [
     },
     {
         title: 'Building Uniswap’s Moat: Attracting Non-DeFi Developers',
-        img: '../../images/3143_2.jpeg',
+        persons:{
+            img: '../../images/3143_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         colorCls: 'blue',
         topic: 'Proposal Discussion',
         tpDisplay: '',

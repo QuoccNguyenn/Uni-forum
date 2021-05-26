@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
+import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
+import Card from '../userCard/card';
 import { category } from './constants/data';
 import { topic } from './constants/topic';
 
 function Categories() {
+
+    const [ClickCard, SetClickCard] = useState(true);
+    const [test, Settest] = useState(0);
+
+    const ref = useRef();
+
+    useOnClickOutside(ref, () => SetClickCard(false));
 
     return(
         <CategorySection>
@@ -33,10 +42,11 @@ function Categories() {
                             <div>Mới nhất</div>
                         </Title>
                         <TopicContent>
-                            {topic.map(item => (
-                                <ItemTopic>
+                            {topic.map((item,idx) => (
+                                <ItemTopic key={idx}>
                                     <Image>
-                                        <img src={item.img} alt=''/>
+                                        <img className="img_pt" src={item.persons.img} ref={ref} onClick={() => { SetClickCard(true); Settest(idx); }} alt=''/>
+                                        <Card ClickCard={ClickCard} img={item.persons.img} name={item.persons.name} time={item.persons.time} metadata={item.persons.metadata}  idx={idx} test ={test}></Card>
                                     </Image>
                                     <div className='content'>
                                         <h5>{item.title}</h5>
@@ -104,6 +114,7 @@ const Item = styled.div`
     justify-content: space-between;
     border-bottom: 1px solid lightgrey;
 
+
     h4{
         margin-top: 0;
         font-weight: bold;
@@ -116,6 +127,8 @@ const Item = styled.div`
         font-weight: bold;
         color: #919191;
     }
+
+    
 `
 
 const TopicHolder = styled.div`
@@ -190,9 +203,18 @@ const Image = styled.div`
     height: 100%;
     width: 45px;
 
+    .active{
+        transform: translateX(100%);
+    }
     img{
         height: 45px;
         width: 45px;
+    }
+
+    @media screen and (max-width: 580px){
+        .active{
+            transform: translateX(30%);
+        }
     }
 `
 
