@@ -1,13 +1,14 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 import Card from '../userCard/card';
 import { category } from './constants/data';
 import { topic } from './constants/topic';
 
-function Categories() {
+function Categories(props) {
 
-    const [ClickCard, SetClickCard] = useState(true);
+    const [ClickCard, SetClickCard] = useState(false);
     const [test, Settest] = useState(0);
 
     const ref = useRef();
@@ -60,6 +61,7 @@ function Categories() {
                             ))}
                         </TopicContent>
                     </div>
+                    <div className='button' onClick={()=>{props.handleActive('2')}}><Link to='/latest/#'>Nhiều hơn</Link></div>
                 </TopicHolder>
             </CategoryContainer>
         </CategorySection>
@@ -127,8 +129,6 @@ const Item = styled.div`
         font-weight: bold;
         color: #919191;
     }
-
-    
 `
 
 const TopicHolder = styled.div`
@@ -137,6 +137,23 @@ const TopicHolder = styled.div`
 
     @media screen and (max-width: 768px){
         width: 100%;
+    }
+
+    .button{
+        a{
+            display: block;
+            padding: 6px 12px;
+            background: #e9e9e9;
+            color: #000;
+            text-decoration: none;
+            align-items: flex-end;
+            justify-content: center;
+            float: right;
+        }
+        a:hover{
+            background: grey;
+            color: #fff;
+        }
     }
 `
 
@@ -149,6 +166,7 @@ const ItemTopic = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     padding: 20px 10px;
     border-bottom: 1px solid lightgrey;
@@ -204,16 +222,33 @@ const Image = styled.div`
     width: 45px;
 
     .active{
-        transform: translateX(100%);
+        transform: translate(5%,20%);
     }
     img{
         height: 45px;
         width: 45px;
     }
-
-    @media screen and (max-width: 580px){
+    @media screen and (max-width: 1024px){
         .active{
-            transform: translateX(30%);
+            transform: translate(-17%,20%);
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .active{
+            transform: translate(20%, 20%);
+        }
+    }
+
+    @media screen and (max-width: 415px){
+        .active{
+            transform: translate(5%, 20%);
+        }
+    }
+
+    @media screen and (max-width: 320px){
+        .active{
+            transform: translate(-3%, 20%);
         }
     }
 `

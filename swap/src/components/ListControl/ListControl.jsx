@@ -4,15 +4,9 @@ import styled from 'styled-components';
 import { category } from '../Categories/constants/data';
 import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 
-function ListControl() {
+function ListControl(props) {
 
     const [click, setClick] = useState(false);
-
-    const [active, setActive] = useState('1');
-
-    function handleActive (value){
-        setActive(value);
-    }
 
     const ref = useRef();
 
@@ -38,9 +32,9 @@ function ListControl() {
             </Selection>
                 
             <ul>
-                <li onClick={()=>{handleActive('1')}}><Link className={(active === '1') ? "active" : ""} to='/Categories'>Danh mục</Link></li>
-                <li onClick={()=>{handleActive('2')}}><Link className={(active === '2') ? "active" : ""} to='/latest'>Mới nhất</Link></li>
-                <li onClick={()=>{handleActive('3')}}><Link className={(active === '3') ? "active" : ""} to='/top'>Top</Link></li>
+                <li onClick={()=>{props.handleActive('1')}}><Link className={(props.active === '1') ? "active" : ""} to='/Categories'>Danh mục</Link></li>
+                <li onClick={()=>{props.handleActive('2')}}><Link className={(props.active === '2') ? "active" : ""} to='/latest'>Mới nhất</Link></li>
+                <li onClick={()=>{props.handleActive('3')}}><Link className={(props.active === '3') ? "active" : ""} to='/top'>Top</Link></li>
             </ul>
         </ListControlSection>
     );

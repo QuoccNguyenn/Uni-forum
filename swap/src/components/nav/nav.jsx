@@ -49,7 +49,8 @@ const Nav = (props) => {
                         </BoxBtn>
 
                         <BoxIcon>
-                            <Icons className="bar" onClick={() => { SetDotsearch(true)}}><i class="fas fa-search"></i>
+                            <Icons className="bar" onClick={() => { SetDotsearch(true)}}>
+                                <i class="fas fa-search"></i>
                                 <BarChild ref={refSearch} onClick={() => { SetDotsearch(true)}} className={dotsearch ? "active" : ""}>
                                     <GroupInput>
                                         <input type="text" placeholder="tìm kiếm chủ đề, bài viết, tài khoản hoặc các danh mục" />
@@ -58,7 +59,7 @@ const Nav = (props) => {
                             </Icons>
 
                             <Icons className="bar" onClick={() => { SetDotbar(true) }}><i class="fas fa-bars"></i>
-                                <BarChild ref = {refbar}  onClick={() => { SetDotbar(true) }} className={dotbar ? "active" : ""}>
+                                <BarChild ref = {refbar}  onClick={() => { SetDotbar(true) }} className={dotbar ? "active panel" : "panel"}>
                                     <ChildUl className="box_link">
                                         <li className="link">Mới Nhất</li>
                                         <li className="link">Top</li>
@@ -144,12 +145,6 @@ const Nav = (props) => {
 
 }
 
-// const Handelclick=()=>{
-//      const[click,setclick]= useState(true);
-//      console.log(click);
-//      return (click);
-// }
-
 const BoxNav = styled.nav`
     with:100%;  
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 25%);
@@ -198,9 +193,6 @@ const Btn = styled.a`
         text-decoration: none;
         background:#bf005c;
     }
-
-
-    
 `
 
 const BoxIcon = styled.div`
@@ -208,7 +200,6 @@ const BoxIcon = styled.div`
 `
 
 const Icons = styled.div`
-    
 
     &:hover{
         background:#e9e9e9;
@@ -228,6 +219,18 @@ const Icons = styled.div`
     &.bar{
         position:relative;
     }
+
+    @media screen and (max-width: 580px){
+        .panel{
+            right: 30px;
+        }
+    }
+    @media screen and (max-width: 320px){
+        .panel {
+            right: 50px;
+            width: 300px;
+        }
+    }
 `
 const BarChild = styled.div`
     position:absolute;
@@ -246,7 +249,6 @@ const BarChild = styled.div`
         display:flex;
     }
 
-
     .category-links{
         .title{
             a{
@@ -259,6 +261,16 @@ const BarChild = styled.div`
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 900px){
+        right: 0;
+        transform: translateX(10%);
+    }
+
+    @media screen and (max-width: 320px){
+        transform: translateX(18%);
+        min-width: 200px;
     }
 `
 
@@ -328,11 +340,14 @@ const GroupInput = styled.div`
         border-color: #ff007a;
         outline: 1px solid #ff007a;
         outline-offset: 0;
-      }
+    }
+
+    @media screen and (max-width: 900px){
+        width: 300px;
+    }
+
+    @media screen and (max-width: 280px){
+        width: 250px;
+    }
 `
-
-
-
-
-
 export default Nav
