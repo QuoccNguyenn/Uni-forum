@@ -19,55 +19,53 @@ const Table=(props) => {
 
     return(
         <BoxTable>
-                    <TheadLatest>
-                            <tr>
-                                <ThLatest className="title">Chủ Đề</ThLatest>
-                                <ThLatest className="poster"></ThLatest>
-                                <ThLatest className="sortable num">Trả Lời</ThLatest>
-                                <ThLatest className="sortable num">Lượt Xem</ThLatest>
-                                <ThLatest className="sortable">Hoạt Động</ThLatest>
-                            </tr>
-                        </TheadLatest>
+            <TheadLatest>
+                <tr>
+                    <ThLatest className="title">Chủ Đề</ThLatest>
+                    <ThLatest className="poster"></ThLatest>
+                    <ThLatest className="sortable num">Trả Lời</ThLatest>
+                    <ThLatest className="sortable num">Lượt Xem</ThLatest>
+                    <ThLatest className="sortable">Hoạt Động</ThLatest>
+                </tr>
+            </TheadLatest>
 
-                        <Tbody>
-                            {data.map((item, idxs) => (
-                                <tr key={idxs}>
-                                    <TdLates>
+            <Tbody>
+                {data.map((item, idxs) => (
+                    <tr key={idxs}>
+                        <TdLates>
 
-                                        <TdLink href="/#">{item.title}</TdLink>
+                            <TdLink href="/#">{item.title}</TdLink>
 
-                                        <TdLink href="/#" className="link_bot">
-                                            <TdSpan className="badge-category-bg" style={{ background: '#652D90' }}></TdSpan>
-                                            <TdSpan className="category-name">{item.cataname}</TdSpan>
-                                        </TdLink>
+                            <TdLink href="/#" className="link_bot">
+                                <TdSpan className="badge-category-bg" style={{ background: '#652D90' }}></TdSpan>
+                                <TdSpan className="category-name">{item.cataname}</TdSpan>
+                            </TdLink>
 
-                                        <TdLink href="/#" className="topic-excerpt">
-                                            {item.topicExcerpt}
-                                        </TdLink>
+                            <TdLink href="/#" className="topic-excerpt">
+                                {item.topicExcerpt}
+                            </TdLink>
 
-                                    </TdLates>
+                        </TdLates>
 
-                                    <TdLates className="posters">
-                                        <div className="linePost">
-                                            {item.persons.map((itemPr, idx) => (
-                                                <p onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }}  ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
-                                                    <Card ClickCard={ClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
-                                                </p>
-                                            ))}
-                                        </div>
-                                    </TdLates>
+                        <TdLates className="posters">
+                            <div className="linePost">
+                                {item.persons.map((itemPr, idx) => (
+                                    <p onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }}  ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
+                                        <Card ClickCard={ClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
+                                    </p>
+                                ))}
+                            </div>
+                        </TdLates>
 
-                                    <TdLates className="number">{item.replies}</TdLates>
-                                    <TdLates className="number">{item.view}</TdLates>
-                                    <TdLates className="Age">
-                                        <a href="/#" >{item.time}</a>
-                                    </TdLates>
-                                </tr>
-                            ))}
-
-
-                        </Tbody>
-                </BoxTable>
+                        <TdLates className="number">{item.replies}</TdLates>
+                        <TdLates className="number">{item.view}</TdLates>
+                        <TdLates className="Age">
+                            <a href="/#" >{item.time}</a>
+                        </TdLates>
+                    </tr>
+                ))}
+            </Tbody>
+        </BoxTable>
     );
 
 }

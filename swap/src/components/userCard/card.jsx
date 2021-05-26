@@ -59,7 +59,7 @@ const Card =(props) => {
 const BoxCard = styled.div`
     position:absolute;
     left:-120px;
-    width:580px;
+    width: 580px;
     padding: .5rem;
     background:white;
     box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
@@ -70,7 +70,18 @@ const BoxCard = styled.div`
     transform: translateX(-40%);
 
     &.active{
-    display:block;
+        display:block;
+    }
+
+    @media screen and (max-width: 580px){
+        width: 300px;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 280px){
+        width: 260px;
+        transform: translateX(-45%);
     }
 `
 
@@ -92,14 +103,25 @@ const FirstCard= styled.div`
         text-decoration: none;
         color:black;
         h1{
-            font-family:Arial, sans-serif;
-            font-size:30px;
-            font-weight:bold;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
         }
 
         h2{
-            font-family:Arial, sans-serif;
-            font-size:18px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 568px){
+        .name{
+            h1{
+                font-size: 20px;
+            }
+            h2{
+                font-size: 13px;
+            }
         }
     }
 `
@@ -111,10 +133,16 @@ const LocalTime = styled.div`
             padding-left:3px;
         }
     }
+    @media screen and (max-width: 568px){
+        font-size: 10px;
+    }
 `
 
 const Metadata = styled.div`
     margin:10px 0;
+    @media screen and (max-width: 568px){
+        font-size: 10px;
+    }
 `
 
 const Btnbadge = styled.div`
@@ -139,6 +167,11 @@ const Btnbadge = styled.div`
         span{
             padding-left:5px;
         }
+    }
+
+    @media screen and (max-width: 580px){
+        font-size: 10px;
+        flex-wrap: wrap;
     }
 `
 

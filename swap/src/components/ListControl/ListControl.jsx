@@ -7,9 +7,6 @@ import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 function ListControl() {
 
     const [click, setClick] = useState(false);
-    function handleClick(){
-        setClick(!click);
-    }
 
     const [active, setActive] = useState('1');
 

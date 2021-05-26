@@ -12,26 +12,20 @@ const Nav = (props) => {
       } = props;
 
     const [modal, setModal] = useState(false);
-    const [modalDN, setModalDN] = useState(true);
+    const [modalDN, setModalDN] = useState(false);
 
     const toggle = () => setModal(!modal);
     const toggleDN = () => setModalDN(!modalDN);
 
     const refSearch = useRef();
     const refbar = useRef();
-    const refModal = useRef();
 
     const [dotsearch, SetDotsearch] = useState(false)
     const [dotbar, SetDotbar] = useState(false);
-    const [clickModal, SetClickModal] = useState(false);
 
     useOnClickOutside(refbar, () => SetDotbar(false));
     useOnClickOutside(refSearch, () => SetDotsearch(false));
-    useOnClickOutside(refModal, () => SetClickModal(false));
 
-    function Handelclick(){
-        SetClickModal(!clickModal);
-    }
 
     return (
         <BoxNav> 
