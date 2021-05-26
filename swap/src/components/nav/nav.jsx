@@ -12,7 +12,7 @@ const Nav = (props) => {
       } = props;
 
     const [modal, setModal] = useState(false);
-    const [modalDN, setModalDN] = useState(true);
+    const [modalDN, setModalDN] = useState(false);
 
     const toggle = () => setModal(!modal);
     const toggleDN = () => setModalDN(!modalDN);
@@ -233,7 +233,6 @@ const Icons = styled.div`
 
     &.bar{
         position:relative;
-        background:#e9e9e9;
     }
 `
 const BarChild = styled.div`

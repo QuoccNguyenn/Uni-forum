@@ -58,7 +58,6 @@ const Card =(props) => {
 
 const BoxCard = styled.div`
     position:absolute;
-    left:-120px;
     width:580px;
     padding: .5rem;
     background:white;
@@ -83,6 +82,7 @@ const FirstCard= styled.div`
         border-radius:50%;
         img{
             width:120px;
+            height:120px;
             border-radius:50%;
         }
     }
