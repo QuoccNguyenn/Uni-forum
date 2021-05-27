@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card =(props) => {
-    const{ClickCard,img ,name , time , metadata,idx, test,idxs, test2}=props
+    const{ref, ClickCard,img ,name , time , metadata,idx, test,idxs, test2}=props
 
     return(
 
-        <BoxCard className={ClickCard && idx===test && idxs===test2 ?"active":""}>
+        <BoxCard ref={ref} className={ClickCard && idx===test && idxs===test2 ?"active":""}>
             <FirstCard>
-                <a href="/#" className="imgCard">
+                <a href="/profile" className="imgCard">
                     <img src={`${img}`} style={{ width: '120px'}} alt="" />
                 </a>
 
-                <a href="/#" className="name">
+                <a href="/profile" className="name">
                     <h1>{name}</h1>
                     <h2>{name}</h2>
                 </a>

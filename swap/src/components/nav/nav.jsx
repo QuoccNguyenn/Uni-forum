@@ -148,6 +148,12 @@ const Nav = (props) => {
 const BoxNav = styled.nav`
     with:100%;  
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 25%);
+    background:white;
+   /*  position: fixed;
+    top:0;
+    left:0;
+    right:0; */
+    z-index:999;
 `
 const ContainerNav = styled.div`
     with:100%;

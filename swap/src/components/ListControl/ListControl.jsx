@@ -18,7 +18,7 @@ function ListControl(props) {
                     <div className='dropdown'>Tất cả chuyên mục</div>
                     <div className='dropdown-icon'><i className={click ? "fas fa-caret-down" : "fas fa-caret-right"}></i></div>
                 </div>
-                <SelectionItem className={click ? "active" : ""}>
+                <SelectionItem ref={ref}  className={click ? "active" : ""}>
                     {category.map(item => (
                         <Item style={item.decor}>
                             <div>

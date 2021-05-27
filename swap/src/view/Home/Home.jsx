@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Categories from '../../components/Categories/Categories';
 import Latest from '../../components/latest/latest';
 import ListControl from '../../components/ListControl/ListControl';
+import Profile from '../../components/profile/profile';
 import BoxTop from '../../components/top/top';
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
   }
 
   return (
+    
     <Router>
       <ListControl active={active} handleActive ={handleActive}/>
       <div className="App">
@@ -23,6 +25,7 @@ function Home() {
         <Route path='/categories' > <Categories active={active} handleActive ={handleActive}/></Route>
         <Route path='/latest' component={Latest} />
         <Route path='/top' component={BoxTop} />
+        <Route path='/profile' component={Profile} />
       </div>
     </Router>
   );
