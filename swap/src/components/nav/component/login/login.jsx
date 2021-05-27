@@ -12,7 +12,7 @@ const Login=() =>{
 
                 <ContentForm>
                     <form action="#">
-                        <GroupInput type={`email`} name={`Email`} title={`Không hiển thị công cộng`}></GroupInput>
+                        <GroupInput type={`email`} name={`Email`} title={`Không hiển thị công cộng`} autofocus></GroupInput>
                         <GroupInput type={`text`} name={`Username`} title={`Duy Nhất, không có khoảng trống, ngắn`}></GroupInput>
                         <GroupInput type={`text`} name={`Tên`} title={`Tên đầy đủ của bạn (tùy chọn)`}></GroupInput>
                         <GroupInput type={`password`} name={`Mật Khẩu`} title={`ít nhất 10 ký tự`}></GroupInput>
@@ -86,6 +86,8 @@ const FooterForm = styled.div`
         padding:.5rem 2.5rem;
         border: transparent;
         color:white;
+        border-radius: 3px;
+        
         &:focus {
             box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
             outline: 1px solid #000;

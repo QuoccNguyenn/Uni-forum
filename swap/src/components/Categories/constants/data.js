@@ -4,7 +4,7 @@ export const category = [
         content: 'The purpose of the Temperature Check is to determine if there is sufficient will to make changes to the status quo.',
         num: '19',
         decor: {
-            borderLeft: '5px solid orange' 
+            borderLeft: '5px solid #f7941d' 
         }
     },
     {
@@ -12,7 +12,7 @@ export const category = [
         content: 'The purpose of the Consensus Check is to establish formal discussion around a potential proposal.',
         num: '7',
         decor: {
-            borderLeft: '5px solid red' 
+            borderLeft: '5px solid #f1592a' 
         }
     },
     {
@@ -28,7 +28,7 @@ export const category = [
         content: 'Explain why members of the Uniswap community may want to delegate their votes to you!',
         num: '25',
         decor: {
-            borderLeft: '5px solid green' 
+            borderLeft: '5px solid #12A89D' 
         }
     },
     {
@@ -44,7 +44,7 @@ export const category = [
         content: 'Discussion about this site, its organization, how it works, and how we can improve it.',
         num: '12',
         decor: {
-            borderLeft: '5px solid grey' 
+            borderLeft: '5px solid #808281' 
         }
     },
     {
@@ -52,7 +52,7 @@ export const category = [
         content: 'Topics that don\'t need a category, or don\'t fit into any other existing category.',
         num: '131',
         decor: {
-            borderLeft: '5px solid red' 
+            borderLeft: '5px solid #BF1E2E' 
         }
     }
 ]

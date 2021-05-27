@@ -10,7 +10,6 @@ function Categories(props) {
 
     const [ClickCard, SetClickCard] = useState(false);
     const [test, Settest] = useState(0);
-
     const ref = useRef();
 
     useOnClickOutside(ref, () => SetClickCard(false));
@@ -28,7 +27,7 @@ function Categories(props) {
                             {category.map(item => (
                                 <Item style={item.decor}>
                                     <div>
-                                        <h4>{item.title}</h4>
+                                        <h4 className='button' onClick={()=>{props.handleActive('2')}}><Link to='/latest/#'>{item.title}</Link></h4>
                                         <p>{item.content}</p>
                                     </div>
                                     <span>{item.num}</span>
@@ -116,6 +115,11 @@ const Item = styled.div`
     justify-content: space-between;
     border-bottom: 1px solid lightgrey;
 
+    a{
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
 
     h4{
         margin-top: 0;
@@ -195,12 +199,32 @@ const ItemTopic = styled.div`
         }
     }
 
-    .violet{
-        background-color: #652D90;
+    .yellow{
+        background-color: #f7941d; 
+    }
+
+    .orange{
+        background-color: #f1592a;
     }
 
     .blue{
         background-color: #0088CC;
+    }
+
+    .green{
+        background-color: #12A89D;
+    }
+
+    .violet{
+        background-color: #652D90;
+    }
+
+    .gray{
+        background-color: #808281
+    }
+
+    .red{
+        background-color: #BF1E2E;
     }
 
     .d-none{

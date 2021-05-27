@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import styled from 'styled-components';
 import Categories from '../../components/Categories/Categories';
 import Latest from '../../components/latest/latest';
 import ListControl from '../../components/ListControl/ListControl';
@@ -15,7 +16,7 @@ function Home() {
   }
 
   return (
-    
+
     <Router>
       <ListControl active={active} handleActive ={handleActive}/>
       <div className="App">
@@ -30,5 +31,10 @@ function Home() {
     </Router>
   );
 }
+
+const WrapperHome = styled.div`
+  max-width: 1140px;
+  margin: auto;
+`
 
 export default Home;

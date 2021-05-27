@@ -12,7 +12,7 @@ const Singin=() =>{
 
                 <ContentForm>
                     <form action="#">
-                        <GroupInput type={`email`} name={`Email`} ></GroupInput>
+                        <GroupInput type={`email`} name={`Email`} autofocus></GroupInput>
                         <GroupInput type={`password`} name={`Mật Khẩu`}></GroupInput>
                    </form>
                 </ContentForm>
@@ -41,11 +41,11 @@ const BoxSingin = styled.div`
 `
 
 const FormSingin = styled.div`
-    width:65%;
-    height100%;
-    display:flex;
-    flex-direction:column;
-    padding: 2.5rem  0 0 1.5rem ;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 0 0 1.5rem ;
 `
 
 
@@ -85,6 +85,7 @@ const FooterForm = styled.div`
         padding:.5rem 2.5rem;
         border: transparent;
         color:white;
+        border-radius: 3px;
         &:focus {
             box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
             outline: 1px solid #000;

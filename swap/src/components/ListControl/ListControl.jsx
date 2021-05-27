@@ -20,19 +20,21 @@ function ListControl(props) {
                 </div>
                 <SelectionItem ref={ref}  className={click ? "active" : ""}>
                     {category.map(item => (
-                        <Item style={item.decor}>
-                            <div>
-                                <h6>{item.title}</h6><span>x{item.num}</span>
-                                <p>{item.content}</p>
-                            </div>
-                            
-                        </Item>
+                        <Link to='/latest'>
+                            <Item style={item.decor}>
+                                <div>
+                                    <h6>{item.title}</h6><span>x{item.num}</span>
+                                    <p>{item.content}</p>
+                                </div>
+                                
+                            </Item>
+                        </Link>
                     ))}
                 </SelectionItem>
             </Selection>
                 
             <ul>
-                <li onClick={()=>{props.handleActive('1')}}><Link className={(props.active === '1') ? "active" : ""} to='/Categories'>Danh mục</Link></li>
+                <li onClick={()=>{props.handleActive('1')}}><Link className={(props.active === '1') ? "active" : ""} to='/categories'>Danh mục</Link></li>
                 <li onClick={()=>{props.handleActive('2')}}><Link className={(props.active === '2') ? "active" : ""} to='/latest'>Mới nhất</Link></li>
                 <li onClick={()=>{props.handleActive('3')}}><Link className={(props.active === '3') ? "active" : ""} to='/top'>Top</Link></li>
             </ul>
@@ -125,6 +127,12 @@ const SelectionItem = styled.div`
     box-sizing: border-box;
     overflow-y: scroll;
 
+    a{
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+
     @media screen and (max-width: 440px){
         left: 15%;
     }
@@ -154,6 +162,11 @@ const Item = styled.div`
         padding: 10px;
         font-weight: bold;
         color: #919191;
+    }
+
+    :hover{
+        background: #ffd9eb;
+        cursor: pointer;
     }
 `
 

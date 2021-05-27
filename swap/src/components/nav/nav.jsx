@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import {  Modal} from 'reactstrap';
+import { Modal } from 'reactstrap';
 import Login from './component/login/login';
 import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 import Singin from './component/login/singin';
+import { Link } from 'react-router-dom';
 
 const Nav = (props) => {
 
@@ -31,19 +32,17 @@ const Nav = (props) => {
         <BoxNav> 
             <div className="container">
                 <ContainerNav>
-                    <Logo><img src="images/logo.png" alt="" /></Logo>
+                    <Logo><Link to='/categories'><img src="images/logo.png" alt="" /></Link></Logo>
                     <ContentNav>
                         <BoxBtn>
                             <Btn href="#" onClick={toggle}>Đăng ký</Btn>
                             <Modal isOpen={modal} toggle={toggle} className={className}>
-                               
                                 <Login></Login>
                             </Modal>
 
                             <Btn href="#" onClick={toggleDN}>Đăng Nhập</Btn>
 
                             <Modal isOpen={modalDN} toggle={toggleDN} className={className}>
-                               
                                <Singin></Singin>
                            </Modal>
                         </BoxBtn>
@@ -129,7 +128,6 @@ const Nav = (props) => {
                                                 <li className="link">Giới Thiệu</li>
                                                 <li className="link">FAQ</li>
                                                 <li className="link">Phím Tắt</li>
-
                                             </ChildUl>
                                         </div>
                                     </div>
@@ -142,7 +140,6 @@ const Nav = (props) => {
             </div>
         </BoxNav>
     )
-
 }
 
 const BoxNav = styled.nav`
@@ -162,10 +159,13 @@ const ContainerNav = styled.div`
 `
 
 const Logo = styled.div`
-    width:20%;
+    width: 30%;
     display:flex;
     justify-content:center;
     align-items:center;
+    a{
+        display: block;
+    }
     img{
         width:50%;
     }
@@ -183,7 +183,6 @@ const BoxBtn = styled.div`
     height:60px;
     display :flex;
     align-items:center;
-
 `
 
 const Btn = styled.a`

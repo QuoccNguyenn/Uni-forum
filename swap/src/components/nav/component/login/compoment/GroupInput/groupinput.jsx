@@ -46,7 +46,7 @@ const BoxInput = styled.div`
     label{
         position: absolute;
         top: 23px;
-        left: 5px;
+        left: 23px;
         transition:all .5s;
     }
 
