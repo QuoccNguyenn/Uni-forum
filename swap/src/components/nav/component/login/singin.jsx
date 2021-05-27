@@ -12,7 +12,7 @@ const Singin=() =>{
 
                 <ContentForm>
                     <form action="#">
-                        <GroupInput type={`email`} name={`Email`} ></GroupInput>
+                        <GroupInput type={`email`} name={`Email`} autofocus></GroupInput>
                         <GroupInput type={`password`} name={`Mật Khẩu`}></GroupInput>
                    </form>
                 </ContentForm>

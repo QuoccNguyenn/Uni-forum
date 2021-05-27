@@ -12,7 +12,7 @@ const Login=() =>{
 
                 <ContentForm>
                     <form action="#">
-                        <GroupInput type={`email`} name={`Email`} title={`Không hiển thị công cộng`}></GroupInput>
+                        <GroupInput type={`email`} name={`Email`} title={`Không hiển thị công cộng`} autofocus></GroupInput>
                         <GroupInput type={`text`} name={`Username`} title={`Duy Nhất, không có khoảng trống, ngắn`}></GroupInput>
                         <GroupInput type={`text`} name={`Tên`} title={`Tên đầy đủ của bạn (tùy chọn)`}></GroupInput>
                         <GroupInput type={`password`} name={`Mật Khẩu`} title={`ít nhất 10 ký tự`}></GroupInput>
