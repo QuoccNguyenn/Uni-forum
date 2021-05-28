@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Home from './view/Home/Home';
 
 function App() {
-
-
   return (
     <Wrapper>
         <Home/>

@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Categories from '../../components/Categories/Categories';
 import Latest from '../../components/latest/latest';
 import ListControl from '../../components/ListControl/ListControl';
+import Nav from '../../components/nav/nav';
+import Post from '../../components/Post/Post';
 import Profile from '../../components/profile/profile';
 import BoxTop from '../../components/top/top';
 
@@ -18,16 +20,32 @@ function Home() {
   return (
 
     <Router>
-      <ListControl active={active} handleActive ={handleActive}/>
-      <div className="App">
-        <Route exact path="/">
-           <Redirect to="/categories" />
-        </Route>
-        <Route path='/categories' > <Categories active={active} handleActive ={handleActive}/></Route>
-        <Route path='/latest' component={Latest} />
-        <Route path='/top' component={BoxTop} />
-        <Route path='/profile' component={Profile} />
-      </div>
+      <Nav/>
+      <WrapperHome>
+        <div>
+          <Route exact path="/">
+            <Redirect to="/categories" />
+          </Route>
+
+          <Route path='/categories' >
+            <ListControl active={active} handleActive ={handleActive}/>
+            <Categories active={active} handleActive ={handleActive}/>
+          </Route>
+
+          <Route path='/latest'>
+            <ListControl active={active} handleActive ={handleActive}/>
+            <Latest/>
+          </Route>
+
+          <Route path='/top'>
+            <ListControl active={active} handleActive ={handleActive}/>
+            <BoxTop/>
+          </Route>
+
+          <Route path='/profile' component={Profile}/>
+          <Route path='/posts' component={Post}/>
+        </div>
+      </WrapperHome>
     </Router>
   );
 }
