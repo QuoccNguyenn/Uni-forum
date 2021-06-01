@@ -5,7 +5,7 @@ import Card from '../userCard/card';
 
 
 
-const Table=(props) => {
+const TableItem=(props) => {
     const{Data}=props;
 
     const data = Data;
@@ -15,8 +15,8 @@ const Table=(props) => {
 
     const ref = useRef();
 
-    useOnClickOutside(ref, () => SetClickCard(false));
-
+/*     useOnClickOutside(ref, () => SetClickCard(false));
+ */
     return(
         <BoxTable>
             <TheadLatest>
@@ -49,11 +49,11 @@ const Table=(props) => {
 
                         <TdLates className="posters">
                             <div className="linePost">
-                                {item.persons.map((itemPr, idx) => (
-                                    <p onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }} ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
-                                        <Card ref={ref} ClickCard={ClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
+                                {item.persons ? item.persons.map((itemPr, idx) => (
+                                    <p ref={ref} onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }} ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
+                                        <Card  ClickCard={ClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
                                     </p>
-                                ))}
+                                )):""}
                             </div>
                         </TdLates>
 
@@ -199,4 +199,4 @@ const TdSpan = styled.span`
 
 
 
-export default Table
+export default TableItem

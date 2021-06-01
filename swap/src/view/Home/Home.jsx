@@ -8,6 +8,8 @@ import Nav from '../../components/nav/nav';
 import Post from '../../components/Post/Post';
 import Profile from '../../components/profile/profile';
 import BoxTop from '../../components/top/top';
+import PersonalPage from '../personalPage/personalPage';
+import Activity from '../../components/activity/activity'
 
 function Home() {
 
@@ -42,7 +44,8 @@ function Home() {
             <BoxTop/>
           </Route>
 
-          <Route path='/profile' component={Profile}/>
+          <Route path='/profile' component={PersonalPage}/>
+          <Route path='/activity' component={Activity}/>
           <Route path='/posts' component={Post}/>
         </div>
       </WrapperHome>

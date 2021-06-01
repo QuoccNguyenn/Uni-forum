@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Table from '../table/table';
+import TableItem from '../table/table';
 import { DataLatest } from './constants';
 
 const Latest = () => {
@@ -13,7 +13,7 @@ const Latest = () => {
                 <ContentLatest>
 
                     <TableLatest>
-                        <Table Data={DataLatest}></Table>
+                        <TableItem Data={DataLatest}></TableItem>
                     </TableLatest>
 
                 </ContentLatest>

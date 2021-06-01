@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
 const Card =(props) => {
     const{ref, ClickCard,img ,name , time , metadata,idx, test,idxs, test2}=props
+
 
     return(
 

@@ -44,7 +44,7 @@ function Categories(props) {
                         <TopicContent>
                             {topic.map((item,idx) => (
                                 <ItemTopic key={idx}>
-                                    <Image>
+                                    <Image ref={ref}>
                                         <img className="img_pt" src={item.persons.img} ref={ref} onClick={() => { SetClickCard(true); Settest(idx); }} alt=''/>
                                         <Card ClickCard={ClickCard} img={item.persons.img} name={item.persons.name} time={item.persons.time} metadata={item.persons.metadata}  idx={idx} test ={test}></Card>
                                     </Image>

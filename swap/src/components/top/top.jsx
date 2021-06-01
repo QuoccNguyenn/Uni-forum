@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Table from '../table/table';
+import TableItem from '../table/table';
 import { DataTop } from './constants';
 
 const BoxTop=()=> {
@@ -11,7 +11,7 @@ const BoxTop=()=> {
                 <ContentTop>
 
                     <TableTop>
-                        <Table Data={DataTop}></Table>
+                        <TableItem Data={DataTop}></TableItem>
                     </TableTop>
 
                 </ContentTop>
