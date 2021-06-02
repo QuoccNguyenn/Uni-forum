@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const TopProfile = () => {
+const TopProfile = (props) => {
+    const{active}=props;
 
     return(
-        <BoxContent>
+        <BoxContent className={active ? "active" : ""}>
              <Avatar className="avatar">
                  <img src="https://avatars.discourse-cdn.com/v4/letter/m/c68b51/240.png" alt="" />
                 </Avatar>

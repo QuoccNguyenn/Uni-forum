@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const InfoPanel = () => {
+const InfoPanel = (props) => {
+    const {active}=props;
     return (
-        <BoxContent>
+        <BoxContent className={active ? "active" : ""}>
             <div>Đã tham gia <span>10 Thg 04</span></div>
             <div>Bài viết cuối cùng <span>10 Thg 04</span></div>
             <div>Được thấy <span>5 Thg 05</span></div>
@@ -20,6 +21,10 @@ const BoxContent = styled.div`
     border-bottom:1px solid #e9e9e9;
 
     display:flex;
+
+    &.active{
+        display:none;
+    }
 
     div{
         color:gray;

@@ -10,6 +10,7 @@ import Profile from '../../components/profile/profile';
 import BoxTop from '../../components/top/top';
 import PersonalPage from '../personalPage/personalPage';
 import Activity from '../../components/activity/activity'
+import User from '../../components/user/user';
 
 function Home() {
 
@@ -43,6 +44,8 @@ function Home() {
             <ListControl active={active} handleActive ={handleActive}/>
             <BoxTop/>
           </Route>
+
+          <Route path='/user' component={User}/>
 
           <Route path='/profile' component={PersonalPage}/>
           <Route path='/activity' component={Activity}/>

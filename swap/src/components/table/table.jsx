@@ -15,8 +15,8 @@ const TableItem=(props) => {
 
     const ref = useRef();
 
-/*     useOnClickOutside(ref, () => SetClickCard(false));
- */
+    useOnClickOutside(ref, () => SetClickCard(false));
+
     return(
         <BoxTable>
             <TheadLatest>
@@ -51,7 +51,7 @@ const TableItem=(props) => {
                             <div className="linePost">
                                 {item.persons ? item.persons.map((itemPr, idx) => (
                                     <p ref={ref} onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }} ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
-                                        <Card  ClickCard={ClickCard} SetClickCard={SetClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
+                                        <Card  ref ={ref} ClickCard={ClickCard} SetClickCard={SetClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
                                     </p>
                                 )):""}
                             </div>

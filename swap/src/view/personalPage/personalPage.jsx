@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Activity from '../../components/activity/activity';
@@ -10,24 +10,32 @@ import Badges from '../../components/BoxBadges/badges';
 
 
 const PersonalPage = () => {
+
+    const [active,SetActive] = useState(true)
+
     return (
         <Router>
             <BoxContent>
                 <div>
 
-                    <TopProfile></TopProfile>
-                    <InfoPanel></InfoPanel>
+
                     <Route exact path="/profile/">
+                        <TopProfile></TopProfile>
+                        <InfoPanel></InfoPanel>
                         <ListControl></ListControl>
                         <Profile></Profile>
                     </Route>
 
                     <Route path='/profile/activity'>
+                        <TopProfile active={active}></TopProfile>
+                        <InfoPanel active={active}></InfoPanel>
                         <ListControl></ListControl>
                         <Activity></Activity>
                     </Route>
 
                     <Route path='/profile/badges' >
+                        <TopProfile active={active}></TopProfile>
+                        <InfoPanel active={active}></InfoPanel>
                         <ListControl></ListControl>
                         <Badges></Badges>
                     </Route>
