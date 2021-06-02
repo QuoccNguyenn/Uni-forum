@@ -10,33 +10,39 @@ function ListControl(props) {
 
     const ref = useRef();
 
-    useOnClickOutside(ref, () =>setClick(false));
-    return(
+    function handleClick() {
+        setClick(!click);
+    }
+
+    useOnClickOutside(ref, () => setClick(false));
+    return (
         <ListControlSection>
             <Selection>
-                <div className='dropdown-holder' ref={ref} onClick={()=>{setClick(true)}}>
+                <div className='dropdown-holder' ref={ref} onClick={() => {handleClick() }}>
                     <div className='dropdown'>Tất cả chuyên mục</div>
                     <div className='dropdown-icon'><i className={click ? "fas fa-caret-down" : "fas fa-caret-right"}></i></div>
+
+                    <SelectionItem  className={click ? "active" : ""}>
+                        {category.map(item => (
+                            <Link to='/latest'>
+                                <Item style={item.decor}>
+                                    <div>
+                                        <h6>{item.title}</h6><span>x{item.num}</span>
+                                        <p>{item.content}</p>
+                                    </div>
+
+                                </Item>
+                            </Link>
+                        ))}
+                    </SelectionItem>
                 </div>
-                <SelectionItem ref={ref}  className={click ? "active" : ""}>
-                    {category.map(item => (
-                        <Link to='/latest'>
-                            <Item style={item.decor}>
-                                <div>
-                                    <h6>{item.title}</h6><span>x{item.num}</span>
-                                    <p>{item.content}</p>
-                                </div>
-                                
-                            </Item>
-                        </Link>
-                    ))}
-                </SelectionItem>
+
             </Selection>
-                
+
             <ul>
-                <li onClick={()=>{props.handleActive('1')}}><Link className={(props.active === '1') ? "active" : ""} to='/categories'>Danh mục</Link></li>
-                <li onClick={()=>{props.handleActive('2')}}><Link className={(props.active === '2') ? "active" : ""} to='/latest'>Mới nhất</Link></li>
-                <li onClick={()=>{props.handleActive('3')}}><Link className={(props.active === '3') ? "active" : ""} to='/top'>Top</Link></li>
+                <li onClick={() => { props.handleActive('1') }}><Link className={(props.active === '1') ? "active" : ""} to='/categories'>Danh mục</Link></li>
+                <li onClick={() => { props.handleActive('2') }}><Link className={(props.active === '2') ? "active" : ""} to='/latest'>Mới nhất</Link></li>
+                <li onClick={() => { props.handleActive('3') }}><Link className={(props.active === '3') ? "active" : ""} to='/top'>Top</Link></li>
             </ul>
         </ListControlSection>
     );
@@ -95,6 +101,8 @@ const Selection = styled.div`
         padding: 0 5px;
 
         cursor: pointer;
+        position:relative;
+
     }
 
     .dropdown{
@@ -112,9 +120,7 @@ const Selection = styled.div`
         }
     }
 
-    .active{
-        display: block;
-    }
+   
 `
 
 const SelectionItem = styled.div`
@@ -123,9 +129,15 @@ const SelectionItem = styled.div`
     display: none;
 
     position: absolute;
+    top:100%;
+    left:0;
     background-color: #f9f9f9;
     box-sizing: border-box;
     overflow-y: scroll;
+
+    &.active{
+        display:block;
+    }
 
     a{
         text-decoration: none;
