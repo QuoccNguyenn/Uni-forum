@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Comments from './Comments/Comments';
+import PostFooter from './Footer/PostFooter';
+import PostInner from './PostInner/PostInner';
+import PostLink from './Footer/PostLink';
+import TopicMap from './TopicMap/TopicMap';
 
 function Post(){
     return(
@@ -10,36 +15,39 @@ function Post(){
             </Header>
             <MainSection>
                 <Body>
-                    <AvatarContainer>
-                        <img src="/images/3143_2.jpeg" alt=""/>
-                    </AvatarContainer>
-                    <ContentContainer>
-                        <Topic>
-                            <div>
-                                <span>HarvardLawBFI</span>
-                            </div>
-                            <div>
-                                <span>3! </span><span>10 giờ</span>
-                            </div>
-                        </Topic>
-                        <Content>
-                            <p>
-                                Governments around the world are considering how they will regulate decentralized finance, and we need to defend the ecosystem and decentralized ideals. 
-                                We should create and fund with 1-1.5M UNI a community-overseen organization that would finance existing and new political groups engaged in crypto 
-                                policy/lobbying with the goals of 
-                                1) educating policymakers to preempt regulatory, legal, political, and tax threats to decentralized finance; 
-                                2) achieving regulatory clarity for decentralized finance and related activity; 
-                                3) advancing laws that support decentralized finance and decentralized governance; and 
-                                4) spurring other DeFi protocols’ governance communities to contribute to the effort (through this organization or their own).
-                            </p>
-                        </Content>
+                    <div className='post'>
+                        <AvatarContainer>
+                            <img src="/images/avt.png" alt=""/>
+                        </AvatarContainer>
+                        <ContentContainer>
                             
-                    </ContentContainer>
+                            {/* Inner content of Post */}
+                            <PostInner/>
+                            {/* End Inner content*/}
+
+                            {/* FOOTER FOR POSTS */}
+                            <PostFooter/>
+                            {/* END FOOTER */}
+                            
+                            {/* POST LINKS */}
+                            <PostLink/>
+                            {/* END POST LINKS */}
+
+                            {/* TOPIC MAP */}
+                            <TopicMap/>
+                            {/* END TOPIC MAP */}
+                                
+                        </ContentContainer>
+
+                    </div>
+                    <Comments/>
                 </Body>
                 <Timeline>
 
                 </Timeline>
             </MainSection>
+
+
         </PostPage>
     );
 }
@@ -58,7 +66,12 @@ const Body = styled.div`
     width: 70%;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    .post{
+        display: flex;
+        flex-direction: row;
+    }
 `
 const AvatarContainer = styled.div`
     width: 60px;
@@ -73,20 +86,19 @@ const AvatarContainer = styled.div`
     }
 `
 const ContentContainer = styled.div`
-    width: calc( 80% - 60px );
+    max-width: 85%;
     padding-top: 15px;
     border-top: 1px solid #e9e9e9;
+    
+    p{
+        font-size: 14px;
+    }
+    .pink-letter {
+        color: #ff007a;
+        text-decoration: none;
+        cursor: pointer;
+    }
 `
-
-const Topic = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
-
-const Content = styled.div`
-    padding-top: 15px;
-`
-
 const Timeline = styled.div`
     width: 30%;
 `
