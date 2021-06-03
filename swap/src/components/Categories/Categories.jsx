@@ -10,9 +10,9 @@ function Categories(props) {
 
     const [ClickCard, SetClickCard] = useState(false);
     const [test, Settest] = useState(0);
-    const ref = useRef();
+    const refCard = useRef();
 
-    useOnClickOutside(ref, () => SetClickCard(false));
+    useOnClickOutside(refCard, () => SetClickCard(false));
 
     return(
         <CategorySection>
@@ -44,9 +44,10 @@ function Categories(props) {
                         <TopicContent>
                             {topic.map((item,idx) => (
                                 <ItemTopic key={idx}>
-                                    <Image ref={ref}>
-                                        <img className="img_pt" src={item.persons.img} ref={ref} onClick={() => { SetClickCard(true); Settest(idx); }} alt=''/>
-                                        <Card ClickCard={ClickCard} img={item.persons.img} name={item.persons.name} time={item.persons.time} metadata={item.persons.metadata}  idx={idx} test ={test}></Card>
+                                    <Image >
+                                        <img className="img_pt" src={item.persons.img}  onClick={() => { SetClickCard(true); Settest(idx); }} alt=''/>
+                                        {idx===test? <BoxCard ref={refCard}  className={ClickCard && idx===test?"active":""}><Card ClickCard={ClickCard} img={item.persons.img} name={item.persons.name} time={item.persons.time} metadata={item.persons.metadata} ></Card></BoxCard>:"" }
+                                        
                                     </Image>
                                     <div className='content'>
                                         <h5>{item.title}</h5>
@@ -276,5 +277,36 @@ const Image = styled.div`
         }
     }
 `
+
+const BoxCard = styled.div`
+    position:absolute;
+    left:-120px;
+    width: 580px;
+    padding: .5rem;
+    background:white;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+    z-index:9999999;
+    text-decoration: none;
+    color:black;
+    display:none;
+    transform: translateX(-40%);
+
+
+    &.active{
+        display:block;
+    }
+
+    @media screen and (max-width: 580px){
+        width: 300px;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 280px){
+        width: 260px;
+        transform: translateX(-45%);
+    }
+`
+
 
 export default Categories;

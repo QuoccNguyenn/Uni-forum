@@ -13,9 +13,9 @@ const TableItem=(props) => {
     const [test, Settest] = useState(0);
     const [pIdxs, SetpIdxs] = useState(0);
 
-    const ref = useRef();
+    const refCard = useRef();
 
-    useOnClickOutside(ref, () => SetClickCard(false));
+    useOnClickOutside(refCard, () => SetClickCard(false));
 
     return(
         <BoxTable>
@@ -50,8 +50,8 @@ const TableItem=(props) => {
                         <TdLates className="posters">
                             <div className="linePost">
                                 {item.persons ? item.persons.map((itemPr, idx) => (
-                                    <p ref={ref} onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }} ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
-                                        <Card  ref ={ref} ClickCard={ClickCard} SetClickCard={SetClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
+                                    <p   onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }}><img className="img_pt" src={`${itemPr.img}`} alt="" />
+                                        {idx===test && idxs===pIdxs ? <BoxCard ref={refCard}  className={ClickCard && idx===test && idxs===pIdxs ?"active":""}><Card  img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} ></Card></BoxCard>:"" }
                                     </p>
                                 )):""}
                             </div>
@@ -196,6 +196,35 @@ const TdSpan = styled.span`
     }
 `
 
+const BoxCard = styled.div`
+    position:absolute;
+    left:-120px;
+    width: 580px;
+    padding: .5rem;
+    background:white;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+    z-index:9999999;
+    text-decoration: none;
+    color:black;
+    display:none;
+    transform: translateX(-40%);
+
+
+    &.active{
+        display:block;
+    }
+
+    @media screen and (max-width: 580px){
+        width: 300px;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 280px){
+        width: 260px;
+        transform: translateX(-45%);
+    }
+`
 
 
 

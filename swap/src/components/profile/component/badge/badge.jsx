@@ -6,17 +6,17 @@ const BadgeCard = (props) => {
     return (
         <Badges>
             {data
-                ? data.map((item,idx) => (
+                ? data.map((item, idx) => (
                     <BoxContent key={idx}>
                         <ImgBadge>
                             <a href="#/">
-                                {item.icon}
+                                <i class={`${item.iconBadges}`}></i>
                             </a>
                         </ImgBadge>
 
                         <ContentBadge>
                             <h3>{item.nameBadges}</h3>
-                            <p>{item.textBadges}</p>
+                            <p>{item.summaryBadges}</p>
                         </ContentBadge>
                     </BoxContent>
                 ))
@@ -38,8 +38,10 @@ const BadgeCard = (props) => {
 }
 
 const Badges = styled.div`
-    width:32%;
-    margin-bottom: 2vh;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 `
 
 const BoxContent = styled.div`
@@ -49,6 +51,8 @@ const BoxContent = styled.div`
     padding: 1rem 0;
     justify-content:center;
     align-items:center;
+    width:32%;
+    margin-bottom: 2vh;
     
     position: relative;
     background-color: #f8f8f8;

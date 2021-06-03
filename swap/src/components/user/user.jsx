@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
+import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 import UserDetail from './component/userDetail/userDetail';
 import { DataUsers } from './data';
 
 
 const User = () => {
+
+ 
+
     return (
         <BoxContent>
             <ListUser>

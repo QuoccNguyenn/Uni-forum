@@ -1,26 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import BadgeCard from '../profile/component/badge/badge';
+import { BoxBadges } from './data';
 
 
 const Badges = () => {
     return (
         <BoxContent>
-            <BadgeCard></BadgeCard>
-            <BadgeCard></BadgeCard>
-            <BadgeCard></BadgeCard>
-            <BadgeCard></BadgeCard>
-            <BadgeCard></BadgeCard>
-            <BadgeCard></BadgeCard>
+            <BadgeCard data={BoxBadges}></BadgeCard>
         </BoxContent>
     );
 }
 
 const BoxContent = styled.div` 
-display: flex;
-flex-direction:row;
-flex-wrap: wrap;
-justify-content: space-between;
+    width:100%;
+    padding:1.5rem 0;
 `
 
 

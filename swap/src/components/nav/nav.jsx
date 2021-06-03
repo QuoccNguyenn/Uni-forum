@@ -59,7 +59,7 @@ const Nav = (props) => {
                             </Icons>
 
                             <Icons className="bar" onClick={() => { SetDotbar(true) }}><i class="fas fa-bars"></i>
-                                <BarChild ref = {refbar}  onClick={() => { SetDotbar(true) }} className={dotbar ? "active panel" : "panel"}>
+                                <BarChild ref = {refbar}   className={dotbar ? "active panel" : "panel"}>
                                     <ChildUl className="box_link">
                                         <NavLink exact to="/latest/"  className="link"  activeClassName="active">Mới Nhất</NavLink>
                                         <NavLink exact to="/top" className="link"  activeClassName="active">Top</NavLink>
