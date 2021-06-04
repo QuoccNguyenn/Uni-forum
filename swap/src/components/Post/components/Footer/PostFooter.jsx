@@ -5,28 +5,39 @@ import AnswersBox from "./AnswersBox";
 function PostFooter() {
 
     const [click,setClick] = useState(false);
+    const [emoClick,setEmoClick] = useState(false);
 
     const handleClick = () => {
         setClick(!click);
     }
+
+    const handleEmoClick = () => {
+        setEmoClick(!emoClick);
+    }
     return(
-        <div>
+        <PosMenuOutter>
             <PostMenu>
                 <AnsButton onClick={handleClick}><span>1 Trả lời</span><i class={click ? "fas fa-chevron-down" : "fas fa-chevron-up"}></i></AnsButton>
                 <div>
                     <DoubleButton>
-                        <a href='/#'>17</a>
-                        <a href='/#' className='emoji'><i class="far fa-heart"></i></a>
+                        <span href='/'>17</span>
+                        <span href='/posts' className='emoji' onClick={handleEmoClick}><i class={emoClick ? "fas fa-heart" : "far fa-heart"}></i></span>
                     </DoubleButton>
                     <ShareButton>
-                        <a href='/#'><i class="fas fa-link"></i></a>
+                        <span href='/'><i class="fas fa-link"></i></span>
                     </ShareButton>
                 </div>
             </PostMenu>
-            <AnswersBox/>
-        </div>
+            <AnswersBox click={click} handleClick={handleClick}/>
+        </PosMenuOutter>
     );
 }
+
+const PosMenuOutter = styled.div`
+    .d-none{
+        display: none;
+    }
+`
 
 const PostMenu = styled.section`
     margin: 15px 0;
@@ -43,26 +54,32 @@ const DoubleButton = styled.div`
     flex-direction: row;
     justify-content: flex-end;
 
-    a{
+    span{
         padding: 8px 10px;
         text-decoration: none;
         color: #bdbdbd;
+        cursor: pointer;
     }
 
     :hover{
         background: #e9e9e9;
     }
         
-    a:hover{
+    span:hover{
         color: #000;
     }
 
+    .emoji{
+        .fas{
+            color: #ff007a;
+        }
+    }
     .emoji:hover{
         color: #ff007a;
     }
 `
 const ShareButton = styled.div`
-    a{
+    span{
         padding: 8px 10px;
         text-decoration: none;
         color: #bdbdbd;
@@ -70,7 +87,7 @@ const ShareButton = styled.div`
 
     :hover{
         background: #e9e9e9;
-        a{
+        span{
             color: #000;
         }
     }

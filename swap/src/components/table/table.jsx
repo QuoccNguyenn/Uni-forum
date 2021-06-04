@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import styled from 'styled-components';
-import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 import Card from '../userCard/card';
 
 
@@ -50,7 +49,7 @@ const TableItem=(props) => {
                         <TdLates className="posters">
                             <div className="linePost">
                                 {item.persons ? item.persons.map((itemPr, idx) => (
-                                    <p ref={ref} onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }} ref={ref}><img className="img_pt" src={`${itemPr.img}`} alt="" />
+                                    <p ref={ref} onClick={() => { SetClickCard(true); Settest(idx);SetpIdxs(idxs) }}><img className="img_pt" src={`${itemPr.img}`} alt="" />
                                         <Card  ClickCard={ClickCard} SetClickCard={SetClickCard} img={itemPr.img} name={itemPr.name} time={itemPr.time} metadata={itemPr.metadata} idx={idx} test ={test} idxs={idxs} test2={pIdxs}></Card>
                                     </p>
                                 )):""}

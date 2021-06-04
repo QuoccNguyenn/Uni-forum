@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Comments from './Comments/Comments';
-import PostFooter from './Footer/PostFooter';
-import PostInner from './PostInner/PostInner';
-import PostLink from './Footer/PostLink';
-import TopicMap from './TopicMap/TopicMap';
+import Comments from './components/Comments/Comments';
+import PostFooter from './components/Footer/PostFooter';
+import PostInner from './components/PostInner/PostInner';
+import PostLink from './components/Footer/PostLink';
+import TopicMap from './components/TopicMap/TopicMap';
+import SignUpBox from './components/SignupBox/SignupBox';
 
 function Post(){
     return(
@@ -40,7 +41,13 @@ function Post(){
                         </ContentContainer>
 
                     </div>
+                    {/* Comment Section */}
                     <Comments/>
+                    {/* End Comment Section */}
+                    
+                    {/* Sign Up Box */}
+                    <SignUpBox/>
+                    {/* End Sign Up Box */}
                 </Body>
                 <Timeline>
 

@@ -53,6 +53,12 @@ function Comments() {
                                         <p>{i.p}</p>
                                     ))}
                                 </Content>
+                                {/* Comment Footer */}
+                                <Footer>
+                                    <PostFooter/>
+                                </Footer>
+                                {/* End Comment Footer */}
+
                             </CommentInner>
                         </Comment>
                     ))

@@ -11,7 +11,7 @@ const ItemBox = (props) => {
                     <Infor key={idx}>
                         <a href="/profile/" className="imgLink"><img src={`${item.img}`} alt="#" /></a>
 
-                        <a href="" className="titleLink">
+                        <a href="/" className="titleLink">
                             <a href="/">{item.title}</a>
                             <a href="/" className="nameCata">
                                 <span className="dot" style={{ background: `${item.colorDot}` }}></span>

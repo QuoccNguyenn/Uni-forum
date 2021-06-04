@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import BadgeCard from './component/badge/badge';
 import BoxPeople from './component/boxPeople/BoxPeople';
 import Catalog from './component/catalog/catalog';
-import InfoPanel from './component/infor_panel/InforPanel';
 import Statistical from './component/statistical/statistical';
-import TopProfile from './component/top/topProfile';
 import TopAnswer from './component/topAnswer/topAnswer';
 
 

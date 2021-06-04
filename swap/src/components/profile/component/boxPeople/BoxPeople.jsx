@@ -13,7 +13,7 @@ const BoxPeople=(props) => {
                 </div>
 
                 <Name>
-                    <a href="#">{name}</a> <br />
+                    <a href="/#">{name}</a> <br />
                     <i class={`${ClassIcon}`}></i> <span className="count">{count}</span>
                 </Name>
             </TopicInfor>

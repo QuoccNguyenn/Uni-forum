@@ -6,7 +6,6 @@ import Latest from '../../components/latest/latest';
 import ListControl from '../../components/ListControl/ListControl';
 import Nav from '../../components/nav/nav';
 import Post from '../../components/Post/Post';
-import Profile from '../../components/profile/profile';
 import BoxTop from '../../components/top/top';
 import PersonalPage from '../personalPage/personalPage';
 import Activity from '../../components/activity/activity'
