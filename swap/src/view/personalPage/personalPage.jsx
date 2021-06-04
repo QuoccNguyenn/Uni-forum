@@ -10,24 +10,32 @@ import Badges from '../../components/BoxBadges/badges';
 
 
 const PersonalPage = () => {
+
+    const active = true
+
     return (
         <Router>
             <BoxContent>
                 <div>
 
-                    <TopProfile></TopProfile>
-                    <InfoPanel></InfoPanel>
+
                     <Route exact path="/profile/">
+                        <TopProfile></TopProfile>
+                        <InfoPanel></InfoPanel>
                         <ListControl></ListControl>
                         <Profile></Profile>
                     </Route>
 
                     <Route path='/profile/activity'>
+                        <TopProfile active={active}></TopProfile>
+                        <InfoPanel active={active}></InfoPanel>
                         <ListControl></ListControl>
                         <Activity></Activity>
                     </Route>
 
                     <Route path='/profile/badges' >
+                        <TopProfile active={active}></TopProfile>
+                        <InfoPanel active={active}></InfoPanel>
                         <ListControl></ListControl>
                         <Badges></Badges>
                     </Route>

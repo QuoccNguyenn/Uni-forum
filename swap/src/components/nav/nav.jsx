@@ -4,7 +4,7 @@ import { Modal } from 'reactstrap';
 import Login from './component/login/login';
 import useOnClickOutside from '../../hook/useclickoutside/useclickoutside';
 import Singin from './component/login/singin';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Nav = (props) => {
 
@@ -12,6 +12,7 @@ const Nav = (props) => {
         className
       } = props;
 
+    // modal bootstrap
     const [modal, setModal] = useState(false);
     const [modalDN, setModalDN] = useState(false);
 
@@ -58,13 +59,13 @@ const Nav = (props) => {
                             </Icons>
 
                             <Icons className="bar" onClick={() => { SetDotbar(true) }}><i class="fas fa-bars"></i>
-                                <BarChild ref = {refbar}  onClick={() => { SetDotbar(true) }} className={dotbar ? "active panel" : "panel"}>
+                                <BarChild ref = {refbar}   className={dotbar ? "active panel" : "panel"}>
                                     <ChildUl className="box_link">
-                                        <li className="link">Mới Nhất</li>
-                                        <li className="link">Top</li>
-                                        <li className="link">Huy Hiệu</li>
-                                        <li className="link">Người dùng</li>
-                                        <li className="link">Nhóm</li>
+                                        <NavLink exact to="/latest/"  className="link"  activeClassName="active">Mới Nhất</NavLink>
+                                        <NavLink exact to="/top" className="link"  activeClassName="active">Top</NavLink>
+                                        <NavLink exact to="/badges" className="link"  activeClassName="active">Huy Hiệu</NavLink>
+                                        <NavLink exact to="/user" className="link"  activeClassName="active">Người dùng</NavLink>
+                                        <NavLink exact to="/" className="link"  activeClassName="active">Nhóm</NavLink>
                                     </ChildUl>
 
                                     <div className="category-links">
@@ -290,12 +291,28 @@ const ChildUl = styled.ul`
         border-bottom:1px solid #e9e9e9;
     }
 
+    .link{
+        width: 50%;
+        cursor: pointer;
+        padding: 0 5px;
+        color:black;
+        text-decoration: none;
+
+        &.active{
+            background:#ffffa6;
+        }
+
+        &:hover{
+            background:#ffffa6;
+        }
+    }
+
     li{
         width: 50%;
         cursor: pointer;
         padding: 0 5px;
 
-        &.link:hover{
+        &:hover{
             background:#ffffa6;
         }
 
