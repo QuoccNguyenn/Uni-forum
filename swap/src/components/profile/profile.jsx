@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BoxBadges } from '../BoxBadges/data';
 import BadgeCard from './component/badge/badge';
 import BoxPeople from './component/boxPeople/BoxPeople';
 import Catalog from './component/catalog/catalog';
@@ -82,12 +83,7 @@ const Profile = () => {
                 <TitleSection>top huy hiệu</TitleSection>
 
                 <BoxBadge>
-                    <BadgeCard></BadgeCard>
-                    <BadgeCard></BadgeCard>
-                    <BadgeCard></BadgeCard>
-                    <BadgeCard></BadgeCard>
-                    <BadgeCard></BadgeCard>
-                    <BadgeCard></BadgeCard>
+                    <BadgeCard data={BoxBadges}></BadgeCard>
                 </BoxBadge>
             </TopSection>
 
@@ -132,10 +128,8 @@ const LinkSection = styled.div`
 `
 
 const BoxBadge = styled.div`
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width:100%;
+    padding:1.5rem 0;
 `
 
 

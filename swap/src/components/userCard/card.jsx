@@ -4,11 +4,13 @@ import styled from 'styled-components';
 
 
 const Card =(props) => {
-    const{ref, ClickCard,img ,name , time , metadata,idx, test,idxs, test2}=props
+    const{img ,name , time , metadata}=props
+
+    
 
     return(
 
-        <BoxCard ref={ref} className={ClickCard && idx===test && idxs===test2 ?"active":""}>
+        <BoxCard>
             <FirstCard>
                 <a href="/profile" className="imgCard">
                     <img src={`${img}`} style={{ width: '120px'}} alt="" />
@@ -59,17 +61,11 @@ const Card =(props) => {
 }
 
 const BoxCard = styled.div`
-    position:absolute;
-    left:-120px;
-    width: 580px;
-    padding: .5rem;
     background:white;
-    box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
     z-index:200;
     text-decoration: none;
     color:black;
-    display:none;
-    transform: translateX(-40%);
+    display:block;
 
     &.active{
         display:block;

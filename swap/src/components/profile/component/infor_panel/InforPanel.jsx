@@ -10,7 +10,7 @@ const InfoPanel = (props) => {
             <div>Bài viết cuối cùng <span>10 Thg 04</span></div>
             <div>Được thấy <span>5 Thg 05</span></div>
             <div>Lượt xem <span>32</span></div>
-            <div>Độ tin tưởng <span>初级用户</span></div>
+            <div>Độ tin tưởng <span>basic user</span></div>
         </BoxContent>
     );
 }

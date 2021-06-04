@@ -1,6 +1,12 @@
 export const DataUsers =[
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/andy8052/90/278_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"andy8052",
         name:"Andy",
         Received:66,
@@ -13,6 +19,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/harvardlawbfi/90/2423_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"HarvardLawBFI",
         name:"",
         Received:28,
@@ -25,6 +37,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/mihal/90/1449_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"mihal ",
         name:"David Mihal",
         Received:27,
@@ -37,6 +55,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/jcp/90/3143_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"jcp",
         name:"john",
         Received:24,
@@ -49,6 +73,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/rleshner/90/764_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"rleshner",
         name:"Robert Leshner",
         Received:21,
@@ -61,6 +91,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/samueldashadrach/90/3242_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"samueldashadrach",
         name:"",
         Received:21,
@@ -73,6 +109,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/agusx1211/90/1565_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"Agusx1211",
         name:"Agustin Aguilar",
         Received:20,
@@ -85,6 +127,12 @@ export const DataUsers =[
     },
     {
         img:"https://avatars.discourse-cdn.com/v4/letter/k/94ad74/90.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"kenneth",
         name:"Ken Ng",
         Received:18,
@@ -97,6 +145,12 @@ export const DataUsers =[
     },
     {
         img:"https://sjc3.discourse-cdn.com/business6/user_avatar/gov.uniswap.org/haydenadams/90/345_2.png",
+        persons:{
+            img: '../../images/225_2.jpeg',
+            name:"Matthew Boyle",
+            time:"20:50",
+            metadata: " Được gửi 10 Thg 04 Đã tham gia 10 Thg 04 Đã đọc 36 phút"
+        },
         Nick_name:"haydenadams",
         name:"Unicorn",
         Received:14,
