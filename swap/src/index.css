@@ -22,3 +22,9 @@ code {
     align-items: center;
 }
 
+p{
+  font-size:15px;
+  margin-bottom:15px;
+  color:#222222;
+  font-family:Arial, sans-serif;
+}

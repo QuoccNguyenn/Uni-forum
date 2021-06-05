@@ -11,6 +11,10 @@ import PersonalPage from '../personalPage/personalPage';
 import Activity from '../../components/activity/activity'
 import User from '../../components/user/user';
 import BadgesPage from '../badgesPage/badgesPage';
+import About from '../about/about';
+import ListAbout from './listAbout/ListAbout';
+import FAQ from '../FAQ/faq';
+import TOS from '../TOS/tos';
 
 function Home() {
 
@@ -51,6 +55,27 @@ function Home() {
           <Route path='/profile' component={PersonalPage}/>
           <Route path='/activity' component={Activity}/>
           <Route path='/posts' component={Post}/>
+
+          {/* about */}
+
+          <Route path='/about'>
+            <ListAbout></ListAbout>
+            <About></About>
+          </Route>
+
+          <Route path='/faq'>
+            <ListAbout></ListAbout>
+            <FAQ></FAQ>
+          </Route>
+
+          <Route path='/tos'>
+            <ListAbout></ListAbout>
+            <TOS></TOS>
+          </Route>
+
+          <Route path='/privacy' component={About}/>
+
+
         </div>
       </WrapperHome>
     </Router>
@@ -60,6 +85,7 @@ function Home() {
 const WrapperHome = styled.div`
   max-width: 1140px;
   margin: auto;
+  padding:2rem 0;
 `
 
 export default Home;

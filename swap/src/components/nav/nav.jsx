@@ -10,7 +10,7 @@ const Nav = (props) => {
 
     const {
         className
-      } = props;
+    } = props;
 
     // modal bootstrap
     const [modal, setModal] = useState(false);
@@ -30,115 +30,113 @@ const Nav = (props) => {
 
 
     return (
-        <BoxNav> 
-            <div className="container">
-                <ContainerNav>
-                    <Logo><Link to='/categories'><img src="images/logo.png" alt="" /></Link></Logo>
-                    <ContentNav>
-                        <BoxBtn>
-                            <Btn href="#" onClick={toggle}>Đăng ký</Btn>
-                            <Modal isOpen={modal} toggle={toggle} className={className}>
-                                <Login></Login>
-                            </Modal>
+        <BoxNav>
+            <ContainerNav>
+                <Logo><Link to='/categories'><img src="images/logo.png" alt="" /></Link></Logo>
+                <ContentNav>
+                    <BoxBtn>
+                        <Btn href="#" onClick={toggle}>Đăng ký</Btn>
+                        <Modal isOpen={modal} toggle={toggle} className={className}>
+                            <Login></Login>
+                        </Modal>
 
-                            <Btn href="#" onClick={toggleDN}>Đăng Nhập</Btn>
+                        <Btn href="#" onClick={toggleDN}>Đăng Nhập</Btn>
 
-                            <Modal isOpen={modalDN} toggle={toggleDN} className={className}>
-                               <Singin></Singin>
-                           </Modal>
-                        </BoxBtn>
+                        <Modal isOpen={modalDN} toggle={toggleDN} className={className}>
+                            <Singin></Singin>
+                        </Modal>
+                    </BoxBtn>
 
-                        <BoxIcon>
-                            <Icons className="bar" onClick={() => { SetDotsearch(true)}}>
-                                <i class="fas fa-search"></i>
-                                <BarChild ref={refSearch} onClick={() => { SetDotsearch(true)}} className={dotsearch ? "active" : ""}>
-                                    <GroupInput>
-                                        <input type="text" placeholder="tìm kiếm chủ đề, bài viết, tài khoản hoặc các danh mục" />
-                                    </GroupInput>
-                                </BarChild>
-                            </Icons>
+                    <BoxIcon>
+                        <Icons className="bar" onClick={() => { SetDotsearch(true) }}>
+                            <i class="fas fa-search"></i>
+                            <BarChild ref={refSearch} onClick={() => { SetDotsearch(true) }} className={dotsearch ? "active" : ""}>
+                                <GroupInput>
+                                    <input type="text" placeholder="tìm kiếm chủ đề, bài viết, tài khoản hoặc các danh mục" />
+                                </GroupInput>
+                            </BarChild>
+                        </Icons>
 
-                            <Icons className="bar" onClick={() => { SetDotbar(true) }}><i class="fas fa-bars"></i>
-                                <BarChild ref = {refbar}   className={dotbar ? "active panel" : "panel"}>
-                                    <ChildUl className="box_link">
-                                        <NavLink exact to="/latest/"  className="link"  activeClassName="active">Mới Nhất</NavLink>
-                                        <NavLink exact to="/top" className="link"  activeClassName="active">Top</NavLink>
-                                        <NavLink exact to="/badges" className="link"  activeClassName="active">Huy Hiệu</NavLink>
-                                        <NavLink exact to="/user" className="link"  activeClassName="active">Người dùng</NavLink>
-                                        <NavLink exact to="/" className="link"  activeClassName="active">Nhóm</NavLink>
-                                    </ChildUl>
+                        <Icons className="bar" onClick={() => { SetDotbar(true) }}><i class="fas fa-bars"></i>
+                            <BarChild ref={refbar} className={dotbar ? "active panel" : "panel"}>
+                                <ChildUl className="box_link">
+                                    <NavLink exact to="/latest/" className="link" activeClassName="active">Mới Nhất</NavLink>
+                                    <NavLink exact to="/top" className="link" activeClassName="active">Top</NavLink>
+                                    <NavLink exact to="/badges" className="link" activeClassName="active">Huy Hiệu</NavLink>
+                                    <NavLink exact to="/user" className="link" activeClassName="active">Người dùng</NavLink>
+                                    <NavLink exact to="/" className="link" activeClassName="active">Nhóm</NavLink>
+                                </ChildUl>
 
-                                    <div className="category-links">
-                                        <div className="title">
-                                            <a href="/#">Danh Mục</a>
-                                            <ChildUl>
-                                                <li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                <div className="category-links">
+                                    <div className="title">
+                                        <a href="/#">Danh Mục</a>
+                                        <ChildUl>
+                                            <li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li>
-                                                <li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                                <b className='topics-count'>131</b>
+                                            </li>
+                                            <li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li><li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                                <b className='topics-count'>131</b>
+                                            </li><li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li><li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                                <b className='topics-count'>131</b>
+                                            </li><li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li><li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                                <b className='topics-count'>131</b>
+                                            </li><li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li><li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                                <b className='topics-count'>131</b>
+                                            </li><li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li><li className="cata_link">
-                                                    <a href="/#" className="nameLink">
-                                                        <span className="dot" style={{ background: '#652D90' }}></span>
-                                                        <span className="text">Uncategorized</span>
-                                                    </a>
+                                                <b className='topics-count'>131</b>
+                                            </li><li className="cata_link">
+                                                <a href="/#" className="nameLink">
+                                                    <span className="dot" style={{ background: '#652D90' }}></span>
+                                                    <span className="text">Uncategorized</span>
+                                                </a>
 
-                                                    <b className='topics-count'>131</b>
-                                                </li>
-                                            </ChildUl>
+                                                <b className='topics-count'>131</b>
+                                            </li>
+                                        </ChildUl>
 
-                                            <ChildUl className="box_link">
-                                                <li className="link">Giới Thiệu</li>
-                                                <li className="link">FAQ</li>
-                                                <li className="link">Phím Tắt</li>
-                                            </ChildUl>
-                                        </div>
+                                        <ChildUl className="box_link">
+                                            <NavLink exact to="/about" className="link" activeClassName="active">Giới Thiệu</NavLink>
+                                            <NavLink exact to="/faq" className="link" activeClassName="active">FAQ</NavLink>
+                                            <NavLink exact to="/tos" className="link" activeClassName="active">Phím Tắt</NavLink>
+                                        </ChildUl>
                                     </div>
+                                </div>
 
-                                </BarChild>
-                            </Icons>
-                        </BoxIcon>
-                    </ContentNav>
-                </ContainerNav>
-            </div>
+                            </BarChild>
+                        </Icons>
+                    </BoxIcon>
+                </ContentNav>
+            </ContainerNav>
         </BoxNav>
     )
 }
@@ -153,8 +151,9 @@ const BoxNav = styled.nav`
     right:0; */
     z-index:999;
 `
-const ContainerNav = styled.div`
-    with:100%;
+const ContainerNav = styled.div`    
+    max-width: 1140px;
+    margin:0 auto;
     height:60px;
     display:flex;
 `

@@ -17,8 +17,6 @@ const PersonalPage = () => {
         <Router>
             <BoxContent>
                 <div>
-
-
                     <Route exact path="/profile/">
                         <TopProfile></TopProfile>
                         <InfoPanel></InfoPanel>

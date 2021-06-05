@@ -6,9 +6,8 @@ import PostInner from './components/PostInner/PostInner';
 import PostLink from './components/Footer/PostLink';
 import TopicMap from './components/TopicMap/TopicMap';
 import SignUpBox from './components/SignupBox/SignupBox';
-
-function Post(){
-    return(
+function Post() {
+    return (
         <PostPage>
             <Header>
                 <h3>Temperature Check - Funding a Political Defense of DeFi</h3>
@@ -18,26 +17,26 @@ function Post(){
                 <Body>
                     <div className='post'>
                         <AvatarContainer>
-                            <img src="/images/avt.png" alt=""/>
+                            <img src="/images/avt.png" alt="" />
                         </AvatarContainer>
                         <ContentContainer>
-                            
+
                             {/* Inner content of Post */}
-                            <PostInner/>
+                            <PostInner />
                             {/* End Inner content*/}
 
                             {/* FOOTER FOR POSTS */}
-                            <PostFooter/>
+                            <PostFooter />
                             {/* END FOOTER */}
-                            
+
                             {/* POST LINKS */}
-                            <PostLink/>
+                            <PostLink />
                             {/* END POST LINKS */}
 
                             {/* TOPIC MAP */}
-                            <TopicMap/>
+                            <TopicMap />
                             {/* END TOPIC MAP */}
-                                
+
                         </ContentContainer>
 
                     </div>
@@ -50,7 +49,11 @@ function Post(){
                     {/* End Sign Up Box */}
                 </Body>
                 <Timeline>
-
+     {/*                <Sticky  ClassName="Scroll">
+                        <LineScroll>
+                            
+                        </LineScroll>
+                    </Sticky> */}
                 </Timeline>
             </MainSection>
 
@@ -108,6 +111,13 @@ const ContentContainer = styled.div`
 `
 const Timeline = styled.div`
     width: 30%;
+`
+
+const LineScroll = styled.div`
+    width:5px;
+    height:300px;
+    background:black;
+
 `
 
 export default Post;
