@@ -50,7 +50,7 @@ function Categories(props) {
                                         
                                     </Image>
                                     <div className='content'>
-                                        <h5>{item.title}</h5>
+                                        <Link to='/posts'><h5>{item.title}</h5></Link>
                                         <Block className={item.colorCls}/><div className={`name ${item.tpDisplay}`}>{item.topic}</div>
                                     </div>
                                     <div className='date-time'>
@@ -187,6 +187,10 @@ const ItemTopic = styled.div`
     }
     .content{
         width: 55%;
+        a{
+            text-decoration: none;
+            color: #000;
+        }
     }
     .date-time{
         text-align: right;
