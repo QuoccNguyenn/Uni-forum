@@ -6,6 +6,7 @@ import PostInner from './components/PostInner/PostInner';
 import PostLink from './components/Footer/PostLink';
 import TopicMap from './components/TopicMap/TopicMap';
 import SignUpBox from './components/SignupBox/SignupBox';
+import RelativePost from './components/Relative/RelativePost';
 
 function Post(){
     return(
@@ -41,10 +42,11 @@ function Post(){
                         </ContentContainer>
 
                     </div>
+
                     {/* Comment Section */}
                     <Comments/>
                     {/* End Comment Section */}
-                    
+
                     {/* Sign Up Box */}
                     <SignUpBox/>
                     {/* End Sign Up Box */}
@@ -54,12 +56,14 @@ function Post(){
                 </Timeline>
             </MainSection>
 
-
+            <RelativePost/>
         </PostPage>
     );
 }
 
 const PostPage = styled.div`
+    scroll-behavior: smooth;
+
     padding: 20px 8px 0;
 `
 const Header = styled.div``
