@@ -15,6 +15,7 @@ import About from '../about/about';
 import ListAbout from './listAbout/ListAbout';
 import FAQ from '../FAQ/faq';
 import TOS from '../TOS/tos';
+import Privacy from '../privacy/privacy';
 
 function Home() {
 
@@ -73,8 +74,10 @@ function Home() {
             <TOS></TOS>
           </Route>
 
-          <Route path='/privacy' component={About}/>
-
+          <Route path='/privacy'>
+            <ListAbout></ListAbout>
+            <Privacy></Privacy>
+          </Route>
 
         </div>
       </WrapperHome>

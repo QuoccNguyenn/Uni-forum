@@ -21,6 +21,7 @@ const BoxContent = styled.div`
     border-bottom:1px solid #e9e9e9;
 
     display:flex;
+    flex-wrap: wrap;
 
     &.active{
         display:none;

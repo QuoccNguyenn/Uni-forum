@@ -17,12 +17,17 @@ const BadgesPage=()=>{
 const BoxContent = styled.div`
     width:100%;
     min-height:300px;
-    padding:2.5rem 0 ;
+    padding:2.5rem .5rem ;
 `
 
 const Title = styled.h1`
-
-`   
+    @media screen and (max-width:600px){
+        font-size:35px;
+    }
+    @media screen and (max-width:415px){
+        font-size:25px;
+    }
+`       
 
 
 export default BadgesPage

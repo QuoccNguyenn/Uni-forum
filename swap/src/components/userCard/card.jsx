@@ -13,7 +13,7 @@ const Card =(props) => {
         <BoxCard>
             <FirstCard>
                 <a href="/profile" className="imgCard">
-                    <img src={`${img}`} style={{ width: '120px'}} alt="" />
+                    <img src={`${img}`} alt="" />
                 </a>
 
                 <a href="/profile" className="name">
@@ -71,10 +71,14 @@ const BoxCard = styled.div`
         display:block;
     }
 
+    @media screen and (max-width:600px){
+        max-width: 500px;
+    }
+
     @media screen and (max-width: 580px){
         width: 300px;
         left: 0;
-        transform: translateX(-50%);
+        transform: translateX(0%);
     }
 
     @media screen and (max-width: 280px){
@@ -90,10 +94,22 @@ const FirstCard= styled.div`
     .imgCard{
         margin-top:-50px;
         border-radius:50%;
+        display: flex;
+        align-items:center;
         img{
             width:120px;
             height:120px;
             border-radius:50%;
+
+            @media screen and (max-width:600px){
+                width:90px;
+                height:90px;
+            }
+
+            @media screen and (max-width: 415px){
+                width: 55px !important;
+                height: 55px;
+            }
         }
     }
 
@@ -103,7 +119,7 @@ const FirstCard= styled.div`
         color:black;
         h1{
             font-family: Arial, sans-serif;
-            font-size: 30px;
+            font-size: 25px;
             font-weight: bold;
         }
 
@@ -128,6 +144,8 @@ const FirstCard= styled.div`
 const LocalTime = styled.div`
     
     .time{
+        font-size: 17px;
+        margin-top: 10px;
         span{
             padding-left:3px;
         }
@@ -138,6 +156,7 @@ const LocalTime = styled.div`
 `
 
 const Metadata = styled.div`
+    font-size: 17px;
     margin:10px 0;
     @media screen and (max-width: 568px){
         font-size: 10px;
@@ -159,6 +178,11 @@ const Btnbadge = styled.div`
         color: black;
         margin-right:10px;
         align-items:center;
+        font-size: 17px;
+        @media screen and (max-width:600px){
+            font-size: 14px;
+        }
+
         &:hover{
             text-decoration: none;
         }
@@ -167,6 +191,8 @@ const Btnbadge = styled.div`
             padding-left:5px;
         }
     }
+
+    
 
     @media screen and (max-width: 580px){
         font-size: 10px;

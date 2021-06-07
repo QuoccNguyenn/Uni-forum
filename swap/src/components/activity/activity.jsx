@@ -53,11 +53,19 @@ const BoxContent = styled.div`
     display: flex;
     flex-direction:row;
     padding:1.5rem 0;
+
+    @media screen and (max-width:900px){
+        flex-direction: column;
+    }
 `
 
 
 const Menu = styled.div`
-    width:15%;
+    width:15%;   
+    @media screen and (max-width:900px){
+        width:100%;
+    }
+    padding-right:2rem;
 
     .menu_link{
         margin: 0;
@@ -86,6 +94,10 @@ const ContentMenu = styled.div`
 
 const UserContent = styled.div`
     width:85%;
+
+    @media screen and(max-width:900px){
+        width:100%;
+    }
 `
 
 export default Activity

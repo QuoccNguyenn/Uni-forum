@@ -75,6 +75,7 @@ const BoxContent = styled.div`
     max-width:700px;
     min-height:300px;
     padding-top:3rem;
+    padding:0 .5rem;
 `
 
 const ContentUl = styled.ul`

@@ -34,10 +34,23 @@ const Singin=() =>{
 
 const BoxSingin = styled.div`
     width:690px;
-    height:500px;
+    min-height:500px;
     display:flex;
     background:white;
     position: relative;
+
+    @media screen and (max-width:600px){
+        width:583px;
+        flex-direction:column;
+    }
+
+    @media screen and (max-width:415px){
+        width:342px;
+    }
+
+    @media screen and (max-width:350px){
+        width:287px;
+    }
 `
 
 const FormSingin = styled.div`
@@ -46,6 +59,10 @@ const FormSingin = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2.5rem 0 0 1.5rem ;
+
+    @media screen and (max-width:600px){
+        width:auto;
+    }
 `
 
 
@@ -86,6 +103,18 @@ const FooterForm = styled.div`
         border: transparent;
         color:white;
         border-radius: 3px;
+
+        @media screen and (max-width:415px){
+            padding:.5rem 1.5rem;
+        }
+        @media screen and (max-width:350px){
+            padding:.5rem;
+        }
+        
+        &:focus {
+            box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+            outline: 1px solid #000;
+        }
         &:focus {
             box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
             outline: 1px solid #000;
@@ -97,6 +126,12 @@ const FooterForm = styled.div`
         color:#646464;
         padding-left:20px ;
         font-size:18px;
+
+        @media screen and (max-width:415px){
+            padding-left:10px;
+            font-size:15px;
+        }
+
     }
 `
 
@@ -109,6 +144,16 @@ const SinginGit = styled.div`
     align-items:center;
     background:#ff007a;
     position:relative;
+
+    @media screen and (max-width:600px){
+        width:auto;
+        height:auto;
+        margin: 20px 0;
+        margin-left: 24px;
+        justify-content: flex-start;
+        background:transparent;
+    }
+
 
     button{
         border: transparent;

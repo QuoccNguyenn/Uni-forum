@@ -18,6 +18,11 @@ const BoxContent = styled.div`
     width:100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 500px){
+        flex-direction: column;
+    }
 
     padding:1rem 0;
 

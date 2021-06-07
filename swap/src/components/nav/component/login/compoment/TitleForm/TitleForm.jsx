@@ -37,7 +37,7 @@ const BoxTitle = styled.div`
     }
 
     p{
-        width: 50%;
+       
     }
 `
 

@@ -28,6 +28,7 @@ const Title = styled.h3`
     font-size:17px;
     font-weight:bold;
     margin-box:20px;
+
 `
 
 export default ListBadges

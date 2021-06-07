@@ -107,7 +107,7 @@ const BoxCard = styled.div`
     @media screen and (max-width: 580px){
         width: 300px;
         left: 0;
-        transform: translateX(-50%);
+        transform: translateX(15%);
     }
 
     @media screen and (max-width: 280px){

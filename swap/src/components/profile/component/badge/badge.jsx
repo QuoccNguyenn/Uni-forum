@@ -57,6 +57,14 @@ const BoxContent = styled.div`
     position: relative;
     background-color: #f8f8f8;
     border: 1px solid #e9e9e9;
+
+    @media screen and (max-width:900px){
+        width:48%;
+    }
+
+    @media screen and (max-width:415px){
+        width:100%
+    }
     
     &:hover{
         box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
@@ -74,16 +82,34 @@ const ImgBadge = styled.div`
             padding:0 2rem;
             color:#cd7f32 !important;
         }
+
+        @media screen and (max-width:600px){
+            i{
+                font-size:43px;
+            }
+        }
     }
 `
 
 const ContentBadge = styled.div`
+    padding-right:5px;
+
     h3{
         font-size:19px;
     }
 
     p{
         font-size:15px;
+    }
+
+    @media screen and (max-width:600px){
+        h3{
+            font-size:15px;
+        }
+
+        p{
+            font-size:11px;
+        }
     }
 `
 

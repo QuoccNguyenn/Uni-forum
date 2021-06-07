@@ -36,8 +36,21 @@ const Login=() =>{
 
 const BoxLogin = styled.div`
     width:690px;
-    height:500px;
+    min-height:500px;
     display:flex;
+
+    @media screen and (max-width:600px){
+        width:583px;
+        flex-direction:column;
+    }
+
+    @media screen and (max-width:415px){
+        width:342px;
+    }
+
+    @media screen and (max-width:350px){
+        width:287px;
+    }
 `
 
 const FormLogin = styled.div`
@@ -46,13 +59,17 @@ const FormLogin = styled.div`
     display:flex;
     flex-direction:column;
     padding: 2.5rem  0 0 1.5rem ;
+
+    @media screen and (max-width:600px){
+        width:auto;
+    }
 `
 
 
 
 const ContentForm = styled.div`
     width:100%;
-    height:60%;
+    max-height:300px;
     overflow: hidden;
     overflow-y: scroll;
     padding-right:1rem;
@@ -80,6 +97,7 @@ const FooterForm = styled.div`
     padding-top:10px;
     width:100%;
     height:20%;
+    marginh-bottom:20px;
 
     button{
         background:#ff007a;
@@ -87,6 +105,13 @@ const FooterForm = styled.div`
         border: transparent;
         color:white;
         border-radius: 3px;
+
+        @media screen and (max-width:415px){
+            padding:.5rem 1.5rem;
+        }
+        @media screen and (max-width:350px){
+            padding:.5rem;
+        }
         
         &:focus {
             box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
@@ -99,18 +124,34 @@ const FooterForm = styled.div`
         color:#646464;
         padding-left:20px ;
         font-size:18px;
+
+        @media screen and (max-width:415px){
+            padding-left:10px;
+            font-size:15px;
+        }
+
+       
     }
 `
 
 const LoginGit = styled.div`
     width:35%;
-    height:100%;
+    height:500px;
     display: flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
     background:#ff007a;
     position:relative;
+
+    @media screen and (max-width:600px){
+        width:auto;
+        height:auto;
+        margin: 20px 0;
+        margin-left: 24px;
+        justify-content: flex-start;
+        background:transparent;
+    }
 
     button{
         border: transparent;

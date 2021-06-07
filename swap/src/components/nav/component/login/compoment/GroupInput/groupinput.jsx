@@ -36,6 +36,14 @@ const BoxInput = styled.div`
         border: 1px solid #919191;
         transition:all .5s;
 
+        @media screen and (max-width:415px){
+            width:300px;
+        }
+
+        @media screen and (max-width:350px){
+            width:250px;
+        }
+
         &:focus {
             outline: none;
             border: 1px solid #ff007a;

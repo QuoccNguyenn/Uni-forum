@@ -120,6 +120,9 @@ const TopCata = styled.div`
 
 const BoxReplies = styled.div`
     width:50%;
+    @media screen and (max-width:600px){
+        width:100%;
+    }
 `
 const LinkSection = styled.div`
     width:50%;

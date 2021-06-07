@@ -58,9 +58,21 @@ const Infor = styled.div`
         display: flex;
         flex-direction:column;
         text-decoration: none;
+
+        @media screen and (max-width:600px){
+            width:70%;
+        }
+
+        @media screen and (max-width:415px){
+            width:50%;
+        }
+        
         a{
             color:#ff007a;
             font-size:15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
 
             &:hover{
             text-decoration: none;
