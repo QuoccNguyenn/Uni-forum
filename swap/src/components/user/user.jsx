@@ -38,6 +38,11 @@ const BoxContent = styled.div`
 
 const ListUser = styled.table`
     width:100%;
+
+    @media screen and (max-width:1024px){
+        width:1000px;
+        overflow-x: scroll;
+    }
 `
 
 const TitleList = styled.thead`

@@ -97,7 +97,7 @@ const FirstCard= styled.div`
         display: flex;
         align-items:center;
         img{
-            width:120px;
+            width:120px !important;
             height:120px;
             border-radius:50%;
 
